@@ -1,0 +1,40 @@
+train:
+  output_dir: "logs/rafdb/"
+  checkpoint_path: 'checkpoints/rafdb/'
+  best_checkpoint_path: 'checkpoints/rafdb/'
+  trans_mode: 0
+  joint_frequency: 10
+  print_freq: 40
+  loss1: 'CrossEntropy'
+  loss2: 'L2'
+  loss3: 'L2'
+  optimizer: 'adam'
+  no_weight_decay_on_bn: True
+  weight_decay: 1e-4
+  base_lr: 0.001
+  momentum: 0.9
+  nesterov: False
+  remarks:
+  seed: -1
+scheduler:
+  type: 'step'
+  step_size: 40
+  lr_decay: 0.5
+  start_epoch: 0
+  epochs: 120
+
+dataset:
+  traindir1: "your RAFDBwithPseudoContinuousLabels"
+  traindir2: "your RelabeledAffectnet"
+  valdir: "tour RAFDBtestset"
+
+dataloader:
+  batch_size: 128
+  workers: 4
+
+model:
+  name: ARM_joint
+  beta: 0.6
+  reg_weight: 15.0
+  
+  
