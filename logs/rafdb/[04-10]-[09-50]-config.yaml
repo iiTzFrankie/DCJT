@@ -1,0 +1,36 @@
+project_name: lightweight
+train:
+  output_dir: logs/rafdb/
+  checkpoint_path: checkpoints/rafdb/
+  best_checkpoint_path: checkpoints/rafdb/
+  joint_frequency: 10
+  print_freq: 40
+  trans_mode: 0
+  seed: -1
+  loss1: CrossEntropy
+  loss2: L2
+  loss3: L2
+  remarks: None
+  optimizer: adam
+  no_weight_decay_on_bn: True
+  weight_decay: 0.0001
+  base_lr: 0.001
+  momentum: 0.9
+  nesterov: False
+scheduler:
+  type: step
+  step_size: 40
+  lr_decay: 0.5
+  start_epoch: 0
+  epochs: 120
+dataset:
+  traindir1: /home/frank/project/CCFER202210/listpath/RAFDB_cross.txt
+  traindir2: /home/frank/frank2023/CCFER202305_lightweight/listpath/1025m2_map2.txt
+  valdir: /home/frank/project/CCFER202210/listpath/RAFDB_aligned_test.txt
+dataloader:
+  batch_size: 128
+  workers: 4
+model:
+  name: ARM_joint
+  beta: 0.6
+  reg_weight: 15.0

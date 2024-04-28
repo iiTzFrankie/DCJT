@@ -1,0 +1,984 @@
+[2024-04-10 09:50:47] __main__ INFO: project_name: lightweight
+train:
+  output_dir: logs/rafdb/
+  checkpoint_path: checkpoints/rafdb/
+  best_checkpoint_path: checkpoints/rafdb/
+  joint_frequency: 10
+  print_freq: 40
+  trans_mode: 0
+  seed: -1
+  loss1: CrossEntropy
+  loss2: L2
+  loss3: L2
+  remarks: None
+  optimizer: adam
+  no_weight_decay_on_bn: True
+  weight_decay: 0.0001
+  base_lr: 0.001
+  momentum: 0.9
+  nesterov: False
+scheduler:
+  type: step
+  step_size: 40
+  lr_decay: 0.5
+  start_epoch: 0
+  epochs: 120
+dataset:
+  traindir1: /home/frank/project/CCFER202210/listpath/RAFDB_cross.txt
+  traindir2: /home/frank/frank2023/CCFER202305_lightweight/listpath/1025m2_map2.txt
+  valdir: /home/frank/project/CCFER202210/listpath/RAFDB_aligned_test.txt
+dataloader:
+  batch_size: 128
+  workers: 4
+model:
+  name: ARM_joint
+  beta: 0.6
+  reg_weight: 15.0
+[2024-04-10 09:50:52] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:50:55] __main__ INFO: Epoch: [0][ 0/96]	Loss 8.3613 (8.3613)	Accuracy 25.781 (25.781)	mseValence 0.5035 (0.5035)	mseArousal 0.3584 (0.3584)
+[2024-04-10 09:51:05] __main__ INFO: Epoch: [0][40/96]	Loss 3.4503 (12.2141)	Accuracy 46.875 (25.514)	mseValence 0.1924 (0.6984)	mseArousal 0.0697 (0.6730)
+[2024-04-10 09:51:14] __main__ INFO: Epoch: [0][80/96]	Loss 3.4775 (7.9258)	Accuracy 33.594 (32.407)	mseValence 0.1520 (0.4438)	mseArousal 0.0961 (0.3797)
+[2024-04-10 09:51:19] __main__ INFO: Test: [ 0/24]	Loss 1.2329 (1.2329)	Accuracy 59.375 (59.375)
+[2024-04-10 09:51:23] __main__ INFO:  **** Accuracy 57.334 *** 
+[2024-04-10 09:51:23] __main__ INFO: Current best accuracy: 57.33376693725586
+[2024-04-10 09:51:24] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:51:25] __main__ INFO: Epoch: [1][ 0/96]	Loss 3.2393 (3.2393)	Accuracy 47.656 (47.656)	mseValence 0.1511 (0.1511)	mseArousal 0.0778 (0.0778)
+[2024-04-10 09:51:34] __main__ INFO: Epoch: [1][40/96]	Loss 2.6849 (2.7232)	Accuracy 50.781 (51.753)	mseValence 0.0938 (0.1226)	mseArousal 0.0822 (0.0657)
+[2024-04-10 09:51:43] __main__ INFO: Epoch: [1][80/96]	Loss 2.1688 (2.4632)	Accuracy 58.594 (55.700)	mseValence 0.0989 (0.1083)	mseArousal 0.0461 (0.0569)
+[2024-04-10 09:51:47] __main__ INFO: Test: [ 0/24]	Loss 0.8193 (0.8193)	Accuracy 74.219 (74.219)
+[2024-04-10 09:51:50] __main__ INFO:  **** Accuracy 74.250 *** 
+[2024-04-10 09:51:50] __main__ INFO: Current best accuracy: 74.25032806396484
+[2024-04-10 09:51:52] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:51:53] __main__ INFO: Epoch: [2][ 0/96]	Loss 2.0029 (2.0029)	Accuracy 60.156 (60.156)	mseValence 0.0883 (0.0883)	mseArousal 0.0339 (0.0339)
+[2024-04-10 09:52:02] __main__ INFO: Epoch: [2][40/96]	Loss 1.4847 (1.6864)	Accuracy 69.531 (67.759)	mseValence 0.0551 (0.0670)	mseArousal 0.0313 (0.0349)
+[2024-04-10 09:52:11] __main__ INFO: Epoch: [2][80/96]	Loss 1.4971 (1.6176)	Accuracy 69.531 (69.329)	mseValence 0.0555 (0.0645)	mseArousal 0.0273 (0.0329)
+[2024-04-10 09:52:15] __main__ INFO: Test: [ 0/24]	Loss 0.6788 (0.6788)	Accuracy 76.562 (76.562)
+[2024-04-10 09:52:18] __main__ INFO:  **** Accuracy 78.846 *** 
+[2024-04-10 09:52:18] __main__ INFO: Current best accuracy: 78.84615325927734
+[2024-04-10 09:52:19] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:52:20] __main__ INFO: Epoch: [3][ 0/96]	Loss 1.0549 (1.0549)	Accuracy 82.812 (82.812)	mseValence 0.0377 (0.0377)	mseArousal 0.0206 (0.0206)
+[2024-04-10 09:52:29] __main__ INFO: Epoch: [3][40/96]	Loss 1.2282 (1.2692)	Accuracy 72.656 (75.133)	mseValence 0.0472 (0.0493)	mseArousal 0.0218 (0.0232)
+[2024-04-10 09:52:38] __main__ INFO: Epoch: [3][80/96]	Loss 1.1503 (1.2547)	Accuracy 75.000 (75.231)	mseValence 0.0427 (0.0480)	mseArousal 0.0187 (0.0234)
+[2024-04-10 09:52:42] __main__ INFO: Test: [ 0/24]	Loss 0.8217 (0.8217)	Accuracy 73.438 (73.438)
+[2024-04-10 09:52:45] __main__ INFO:  **** Accuracy 79.922 *** 
+[2024-04-10 09:52:45] __main__ INFO: Current best accuracy: 79.92176818847656
+[2024-04-10 09:52:46] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:52:48] __main__ INFO: Epoch: [4][ 0/96]	Loss 1.2155 (1.2155)	Accuracy 71.875 (71.875)	mseValence 0.0464 (0.0464)	mseArousal 0.0167 (0.0167)
+[2024-04-10 09:52:57] __main__ INFO: Epoch: [4][40/96]	Loss 0.8975 (1.0800)	Accuracy 76.562 (78.068)	mseValence 0.0293 (0.0383)	mseArousal 0.0148 (0.0218)
+[2024-04-10 09:53:05] __main__ INFO: Epoch: [4][80/96]	Loss 1.0118 (1.0582)	Accuracy 75.000 (78.405)	mseValence 0.0359 (0.0378)	mseArousal 0.0179 (0.0205)
+[2024-04-10 09:53:10] __main__ INFO: Test: [ 0/24]	Loss 0.7393 (0.7393)	Accuracy 71.094 (71.094)
+[2024-04-10 09:53:13] __main__ INFO:  **** Accuracy 77.966 *** 
+[2024-04-10 09:53:13] __main__ INFO: Current best accuracy: 79.92176818847656
+[2024-04-10 09:53:13] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:53:15] __main__ INFO: Epoch: [5][ 0/96]	Loss 1.1325 (1.1325)	Accuracy 81.250 (81.250)	mseValence 0.0424 (0.0424)	mseArousal 0.0275 (0.0275)
+[2024-04-10 09:53:23] __main__ INFO: Epoch: [5][40/96]	Loss 0.7403 (0.9278)	Accuracy 85.938 (81.098)	mseValence 0.0289 (0.0321)	mseArousal 0.0133 (0.0168)
+[2024-04-10 09:53:32] __main__ INFO: Epoch: [5][80/96]	Loss 0.7315 (0.9042)	Accuracy 81.250 (81.298)	mseValence 0.0156 (0.0316)	mseArousal 0.0155 (0.0164)
+[2024-04-10 09:53:37] __main__ INFO: Test: [ 0/24]	Loss 0.5054 (0.5054)	Accuracy 83.594 (83.594)
+[2024-04-10 09:53:40] __main__ INFO:  **** Accuracy 86.408 *** 
+[2024-04-10 09:53:40] __main__ INFO: Current best accuracy: 86.4080810546875
+[2024-04-10 09:53:41] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:53:42] __main__ INFO: Epoch: [6][ 0/96]	Loss 0.7616 (0.7616)	Accuracy 86.719 (86.719)	mseValence 0.0260 (0.0260)	mseArousal 0.0174 (0.0174)
+[2024-04-10 09:53:51] __main__ INFO: Epoch: [6][40/96]	Loss 0.7661 (0.7908)	Accuracy 81.250 (83.841)	mseValence 0.0274 (0.0262)	mseArousal 0.0164 (0.0165)
+[2024-04-10 09:54:00] __main__ INFO: Epoch: [6][80/96]	Loss 0.8865 (0.7953)	Accuracy 78.125 (83.816)	mseValence 0.0275 (0.0273)	mseArousal 0.0128 (0.0154)
+[2024-04-10 09:54:04] __main__ INFO: Test: [ 0/24]	Loss 0.7784 (0.7784)	Accuracy 78.125 (78.125)
+[2024-04-10 09:54:07] __main__ INFO:  **** Accuracy 83.246 *** 
+[2024-04-10 09:54:07] __main__ INFO: Current best accuracy: 86.4080810546875
+[2024-04-10 09:54:08] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:54:09] __main__ INFO: Epoch: [7][ 0/96]	Loss 0.6751 (0.6751)	Accuracy 85.938 (85.938)	mseValence 0.0201 (0.0201)	mseArousal 0.0169 (0.0169)
+[2024-04-10 09:54:18] __main__ INFO: Epoch: [7][40/96]	Loss 0.6798 (0.7334)	Accuracy 89.844 (84.889)	mseValence 0.0287 (0.0249)	mseArousal 0.0135 (0.0139)
+[2024-04-10 09:54:27] __main__ INFO: Epoch: [7][80/96]	Loss 0.6426 (0.7272)	Accuracy 87.500 (85.291)	mseValence 0.0247 (0.0251)	mseArousal 0.0124 (0.0142)
+[2024-04-10 09:54:31] __main__ INFO: Test: [ 0/24]	Loss 0.6052 (0.6052)	Accuracy 82.031 (82.031)
+[2024-04-10 09:54:34] __main__ INFO:  **** Accuracy 85.724 *** 
+[2024-04-10 09:54:34] __main__ INFO: Current best accuracy: 86.4080810546875
+[2024-04-10 09:54:34] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:54:36] __main__ INFO: Epoch: [8][ 0/96]	Loss 0.6464 (0.6464)	Accuracy 88.281 (88.281)	mseValence 0.0292 (0.0292)	mseArousal 0.0096 (0.0096)
+[2024-04-10 09:54:45] __main__ INFO: Epoch: [8][40/96]	Loss 0.6029 (0.6708)	Accuracy 88.281 (86.776)	mseValence 0.0205 (0.0235)	mseArousal 0.0114 (0.0128)
+[2024-04-10 09:54:54] __main__ INFO: Epoch: [8][80/96]	Loss 0.5723 (0.6773)	Accuracy 90.625 (86.680)	mseValence 0.0265 (0.0241)	mseArousal 0.0111 (0.0133)
+[2024-04-10 09:54:58] __main__ INFO: Test: [ 0/24]	Loss 0.6439 (0.6439)	Accuracy 78.906 (78.906)
+[2024-04-10 09:55:01] __main__ INFO:  **** Accuracy 84.192 *** 
+[2024-04-10 09:55:01] __main__ INFO: Current best accuracy: 86.4080810546875
+[2024-04-10 09:55:01] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:55:02] __main__ INFO: Epoch: [9][ 0/96]	Loss 0.6540 (0.6540)	Accuracy 86.719 (86.719)	mseValence 0.0235 (0.0235)	mseArousal 0.0115 (0.0115)
+[2024-04-10 09:55:11] __main__ INFO: Epoch: [9][40/96]	Loss 0.5478 (0.5980)	Accuracy 87.500 (88.567)	mseValence 0.0187 (0.0217)	mseArousal 0.0104 (0.0131)
+[2024-04-10 09:55:20] __main__ INFO: Epoch: [9][80/96]	Loss 0.6292 (0.6020)	Accuracy 87.500 (88.387)	mseValence 0.0221 (0.0213)	mseArousal 0.0113 (0.0128)
+[2024-04-10 09:55:25] __main__ INFO: Test: [ 0/24]	Loss 0.4643 (0.4643)	Accuracy 83.594 (83.594)
+[2024-04-10 09:55:28] __main__ INFO:  **** Accuracy 89.016 *** 
+[2024-04-10 09:55:28] __main__ INFO: Current best accuracy: 89.01564025878906
+[2024-04-10 09:55:29] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:55:30] __main__ INFO: Epoch: [10][ 0/96]	Loss 0.6197 (0.6197)	Accuracy 87.500 (87.500)	mseValence 0.0185 (0.0185)	mseArousal 0.0097 (0.0097)
+[2024-04-10 09:55:39] __main__ INFO: Epoch: [10][40/96]	Loss 0.4957 (0.5535)	Accuracy 92.188 (89.425)	mseValence 0.0175 (0.0197)	mseArousal 0.0121 (0.0116)
+[2024-04-10 09:55:48] __main__ INFO: Epoch: [10][80/96]	Loss 0.5707 (0.5688)	Accuracy 88.281 (88.850)	mseValence 0.0227 (0.0203)	mseArousal 0.0117 (0.0117)
+[2024-04-10 09:55:52] __main__ INFO: Test: [ 0/24]	Loss 0.6107 (0.6107)	Accuracy 82.031 (82.031)
+[2024-04-10 09:55:55] __main__ INFO:  **** Accuracy 85.463 *** 
+[2024-04-10 09:55:55] __main__ INFO: Current best accuracy: 89.01564025878906
+[2024-04-10 09:55:56] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:55:57] __main__ INFO: Epoch: [11][ 0/96]	Loss 0.5721 (0.5721)	Accuracy 85.938 (85.938)	mseValence 0.0147 (0.0147)	mseArousal 0.0145 (0.0145)
+[2024-04-10 09:56:06] __main__ INFO: Epoch: [11][40/96]	Loss 0.6244 (0.5055)	Accuracy 89.844 (90.892)	mseValence 0.0271 (0.0185)	mseArousal 0.0135 (0.0123)
+[2024-04-10 09:56:15] __main__ INFO: Epoch: [11][80/96]	Loss 0.3627 (0.5213)	Accuracy 93.750 (90.394)	mseValence 0.0154 (0.0195)	mseArousal 0.0100 (0.0117)
+[2024-04-10 09:56:19] __main__ INFO: Test: [ 0/24]	Loss 0.7615 (0.7615)	Accuracy 76.562 (76.562)
+[2024-04-10 09:56:22] __main__ INFO:  **** Accuracy 81.519 *** 
+[2024-04-10 09:56:22] __main__ INFO: Current best accuracy: 89.01564025878906
+[2024-04-10 09:56:23] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:56:24] __main__ INFO: Epoch: [12][ 0/96]	Loss 0.4932 (0.4932)	Accuracy 86.719 (86.719)	mseValence 0.0141 (0.0141)	mseArousal 0.0116 (0.0116)
+[2024-04-10 09:56:33] __main__ INFO: Epoch: [12][40/96]	Loss 0.4774 (0.4996)	Accuracy 91.406 (90.644)	mseValence 0.0159 (0.0185)	mseArousal 0.0102 (0.0108)
+[2024-04-10 09:56:42] __main__ INFO: Epoch: [12][80/96]	Loss 0.4091 (0.5062)	Accuracy 91.406 (90.702)	mseValence 0.0158 (0.0193)	mseArousal 0.0098 (0.0111)
+[2024-04-10 09:56:46] __main__ INFO: Test: [ 0/24]	Loss 0.4224 (0.4224)	Accuracy 86.719 (86.719)
+[2024-04-10 09:56:49] __main__ INFO:  **** Accuracy 89.048 *** 
+[2024-04-10 09:56:49] __main__ INFO: Current best accuracy: 89.0482406616211
+[2024-04-10 09:56:50] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:56:51] __main__ INFO: Epoch: [13][ 0/96]	Loss 0.3651 (0.3651)	Accuracy 93.750 (93.750)	mseValence 0.0160 (0.0160)	mseArousal 0.0099 (0.0099)
+[2024-04-10 09:57:00] __main__ INFO: Epoch: [13][40/96]	Loss 0.5266 (0.4481)	Accuracy 92.969 (92.226)	mseValence 0.0289 (0.0176)	mseArousal 0.0090 (0.0115)
+[2024-04-10 09:57:09] __main__ INFO: Epoch: [13][80/96]	Loss 0.4116 (0.4787)	Accuracy 96.094 (91.464)	mseValence 0.0190 (0.0187)	mseArousal 0.0109 (0.0118)
+[2024-04-10 09:57:13] __main__ INFO: Test: [ 0/24]	Loss 0.8378 (0.8378)	Accuracy 76.562 (76.562)
+[2024-04-10 09:57:16] __main__ INFO:  **** Accuracy 82.464 *** 
+[2024-04-10 09:57:16] __main__ INFO: Current best accuracy: 89.0482406616211
+[2024-04-10 09:57:17] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:57:18] __main__ INFO: Epoch: [14][ 0/96]	Loss 0.4459 (0.4459)	Accuracy 89.844 (89.844)	mseValence 0.0137 (0.0137)	mseArousal 0.0075 (0.0075)
+[2024-04-10 09:57:27] __main__ INFO: Epoch: [14][40/96]	Loss 0.3887 (0.4124)	Accuracy 94.531 (92.435)	mseValence 0.0114 (0.0164)	mseArousal 0.0080 (0.0099)
+[2024-04-10 09:57:36] __main__ INFO: Epoch: [14][80/96]	Loss 0.3932 (0.4258)	Accuracy 92.969 (92.236)	mseValence 0.0161 (0.0171)	mseArousal 0.0109 (0.0101)
+[2024-04-10 09:57:40] __main__ INFO: Test: [ 0/24]	Loss 0.5458 (0.5458)	Accuracy 82.812 (82.812)
+[2024-04-10 09:57:42] __main__ INFO:  **** Accuracy 86.473 *** 
+[2024-04-10 09:57:42] __main__ INFO: Current best accuracy: 89.0482406616211
+[2024-04-10 09:57:43] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:57:44] __main__ INFO: Epoch: [15][ 0/96]	Loss 0.2828 (0.2828)	Accuracy 93.750 (93.750)	mseValence 0.0142 (0.0142)	mseArousal 0.0068 (0.0068)
+[2024-04-10 09:57:53] __main__ INFO: Epoch: [15][40/96]	Loss 0.4592 (0.4069)	Accuracy 92.969 (93.312)	mseValence 0.0200 (0.0173)	mseArousal 0.0086 (0.0103)
+[2024-04-10 09:58:02] __main__ INFO: Epoch: [15][80/96]	Loss 0.3586 (0.4246)	Accuracy 94.531 (92.757)	mseValence 0.0123 (0.0178)	mseArousal 0.0090 (0.0104)
+[2024-04-10 09:58:06] __main__ INFO: Test: [ 0/24]	Loss 0.4022 (0.4022)	Accuracy 85.938 (85.938)
+[2024-04-10 09:58:09] __main__ INFO:  **** Accuracy 89.016 *** 
+[2024-04-10 09:58:09] __main__ INFO: Current best accuracy: 89.0482406616211
+[2024-04-10 09:58:10] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:58:11] __main__ INFO: Epoch: [16][ 0/96]	Loss 0.3174 (0.3174)	Accuracy 96.094 (96.094)	mseValence 0.0141 (0.0141)	mseArousal 0.0118 (0.0118)
+[2024-04-10 09:58:20] __main__ INFO: Epoch: [16][40/96]	Loss 0.5178 (0.3918)	Accuracy 91.406 (93.464)	mseValence 0.0193 (0.0169)	mseArousal 0.0144 (0.0105)
+[2024-04-10 09:58:29] __main__ INFO: Epoch: [16][80/96]	Loss 0.6031 (0.4012)	Accuracy 89.844 (93.297)	mseValence 0.0220 (0.0172)	mseArousal 0.0161 (0.0105)
+[2024-04-10 09:58:33] __main__ INFO: Test: [ 0/24]	Loss 0.4773 (0.4773)	Accuracy 87.500 (87.500)
+[2024-04-10 09:58:35] __main__ INFO:  **** Accuracy 90.124 *** 
+[2024-04-10 09:58:35] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 09:58:36] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:58:38] __main__ INFO: Epoch: [17][ 0/96]	Loss 0.3845 (0.3845)	Accuracy 95.312 (95.312)	mseValence 0.0196 (0.0196)	mseArousal 0.0090 (0.0090)
+[2024-04-10 09:58:47] __main__ INFO: Epoch: [17][40/96]	Loss 0.4427 (0.3822)	Accuracy 92.188 (93.883)	mseValence 0.0217 (0.0172)	mseArousal 0.0136 (0.0094)
+[2024-04-10 09:58:56] __main__ INFO: Epoch: [17][80/96]	Loss 0.3491 (0.3783)	Accuracy 95.312 (94.068)	mseValence 0.0152 (0.0167)	mseArousal 0.0097 (0.0101)
+[2024-04-10 09:59:00] __main__ INFO: Test: [ 0/24]	Loss 0.5994 (0.5994)	Accuracy 81.250 (81.250)
+[2024-04-10 09:59:03] __main__ INFO:  **** Accuracy 88.429 *** 
+[2024-04-10 09:59:03] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 09:59:03] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:59:04] __main__ INFO: Epoch: [18][ 0/96]	Loss 0.2235 (0.2235)	Accuracy 97.656 (97.656)	mseValence 0.0093 (0.0093)	mseArousal 0.0084 (0.0084)
+[2024-04-10 09:59:13] __main__ INFO: Epoch: [18][40/96]	Loss 0.3135 (0.3288)	Accuracy 94.531 (94.703)	mseValence 0.0151 (0.0149)	mseArousal 0.0071 (0.0090)
+[2024-04-10 09:59:22] __main__ INFO: Epoch: [18][80/96]	Loss 0.2651 (0.3528)	Accuracy 98.438 (94.300)	mseValence 0.0169 (0.0158)	mseArousal 0.0080 (0.0093)
+[2024-04-10 09:59:27] __main__ INFO: Test: [ 0/24]	Loss 0.5482 (0.5482)	Accuracy 82.812 (82.812)
+[2024-04-10 09:59:29] __main__ INFO:  **** Accuracy 88.331 *** 
+[2024-04-10 09:59:29] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 09:59:30] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:59:31] __main__ INFO: Epoch: [19][ 0/96]	Loss 0.3935 (0.3935)	Accuracy 94.531 (94.531)	mseValence 0.0213 (0.0213)	mseArousal 0.0108 (0.0108)
+[2024-04-10 09:59:40] __main__ INFO: Epoch: [19][40/96]	Loss 0.3628 (0.3427)	Accuracy 92.969 (95.179)	mseValence 0.0174 (0.0166)	mseArousal 0.0097 (0.0097)
+[2024-04-10 09:59:49] __main__ INFO: Epoch: [19][80/96]	Loss 0.3574 (0.3622)	Accuracy 95.312 (94.483)	mseValence 0.0183 (0.0170)	mseArousal 0.0101 (0.0098)
+[2024-04-10 09:59:53] __main__ INFO: Test: [ 0/24]	Loss 0.4316 (0.4316)	Accuracy 89.062 (89.062)
+[2024-04-10 09:59:56] __main__ INFO:  **** Accuracy 88.299 *** 
+[2024-04-10 09:59:56] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 09:59:56] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 09:59:58] __main__ INFO: Epoch: [20][ 0/96]	Loss 0.3501 (0.3501)	Accuracy 95.312 (95.312)	mseValence 0.0162 (0.0162)	mseArousal 0.0115 (0.0115)
+[2024-04-10 10:00:07] __main__ INFO: Epoch: [20][40/96]	Loss 0.3109 (0.3056)	Accuracy 96.875 (95.312)	mseValence 0.0163 (0.0143)	mseArousal 0.0099 (0.0081)
+[2024-04-10 10:00:16] __main__ INFO: Epoch: [20][80/96]	Loss 0.3640 (0.3238)	Accuracy 92.969 (94.985)	mseValence 0.0157 (0.0152)	mseArousal 0.0064 (0.0084)
+[2024-04-10 10:00:20] __main__ INFO: Test: [ 0/24]	Loss 0.6611 (0.6611)	Accuracy 82.031 (82.031)
+[2024-04-10 10:00:22] __main__ INFO:  **** Accuracy 88.918 *** 
+[2024-04-10 10:00:22] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:00:23] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:00:24] __main__ INFO: Epoch: [21][ 0/96]	Loss 0.3736 (0.3736)	Accuracy 92.969 (92.969)	mseValence 0.0158 (0.0158)	mseArousal 0.0122 (0.0122)
+[2024-04-10 10:00:33] __main__ INFO: Epoch: [21][40/96]	Loss 0.4228 (0.3076)	Accuracy 93.750 (95.808)	mseValence 0.0168 (0.0147)	mseArousal 0.0086 (0.0094)
+[2024-04-10 10:00:42] __main__ INFO: Epoch: [21][80/96]	Loss 0.2502 (0.3154)	Accuracy 95.312 (95.486)	mseValence 0.0123 (0.0147)	mseArousal 0.0074 (0.0095)
+[2024-04-10 10:00:46] __main__ INFO: Test: [ 0/24]	Loss 0.6497 (0.6497)	Accuracy 81.250 (81.250)
+[2024-04-10 10:00:49] __main__ INFO:  **** Accuracy 87.288 *** 
+[2024-04-10 10:00:49] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:00:50] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:00:51] __main__ INFO: Epoch: [22][ 0/96]	Loss 0.3137 (0.3137)	Accuracy 96.875 (96.875)	mseValence 0.0192 (0.0192)	mseArousal 0.0111 (0.0111)
+[2024-04-10 10:01:00] __main__ INFO: Epoch: [22][40/96]	Loss 0.2963 (0.2979)	Accuracy 94.531 (95.694)	mseValence 0.0146 (0.0151)	mseArousal 0.0086 (0.0084)
+[2024-04-10 10:01:09] __main__ INFO: Epoch: [22][80/96]	Loss 0.2487 (0.3087)	Accuracy 98.438 (95.399)	mseValence 0.0151 (0.0153)	mseArousal 0.0078 (0.0086)
+[2024-04-10 10:01:13] __main__ INFO: Test: [ 0/24]	Loss 0.6781 (0.6781)	Accuracy 79.688 (79.688)
+[2024-04-10 10:01:16] __main__ INFO:  **** Accuracy 87.581 *** 
+[2024-04-10 10:01:16] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:01:16] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:01:17] __main__ INFO: Epoch: [23][ 0/96]	Loss 0.2537 (0.2537)	Accuracy 97.656 (97.656)	mseValence 0.0144 (0.0144)	mseArousal 0.0098 (0.0098)
+[2024-04-10 10:01:26] __main__ INFO: Epoch: [23][40/96]	Loss 0.2855 (0.2863)	Accuracy 96.875 (95.808)	mseValence 0.0161 (0.0141)	mseArousal 0.0083 (0.0079)
+[2024-04-10 10:01:35] __main__ INFO: Epoch: [23][80/96]	Loss 0.2368 (0.2989)	Accuracy 97.656 (95.602)	mseValence 0.0131 (0.0143)	mseArousal 0.0067 (0.0081)
+[2024-04-10 10:01:39] __main__ INFO: Test: [ 0/24]	Loss 0.6990 (0.6990)	Accuracy 78.906 (78.906)
+[2024-04-10 10:01:42] __main__ INFO:  **** Accuracy 88.559 *** 
+[2024-04-10 10:01:42] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:01:43] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:01:44] __main__ INFO: Epoch: [24][ 0/96]	Loss 0.2490 (0.2490)	Accuracy 96.094 (96.094)	mseValence 0.0161 (0.0161)	mseArousal 0.0053 (0.0053)
+[2024-04-10 10:01:53] __main__ INFO: Epoch: [24][40/96]	Loss 0.3564 (0.2781)	Accuracy 93.750 (96.113)	mseValence 0.0187 (0.0138)	mseArousal 0.0095 (0.0086)
+[2024-04-10 10:02:02] __main__ INFO: Epoch: [24][80/96]	Loss 0.3521 (0.2946)	Accuracy 92.969 (95.824)	mseValence 0.0194 (0.0144)	mseArousal 0.0082 (0.0086)
+[2024-04-10 10:02:06] __main__ INFO: Test: [ 0/24]	Loss 0.5097 (0.5097)	Accuracy 83.594 (83.594)
+[2024-04-10 10:02:09] __main__ INFO:  **** Accuracy 88.885 *** 
+[2024-04-10 10:02:09] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:02:09] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:02:10] __main__ INFO: Epoch: [25][ 0/96]	Loss 0.2524 (0.2524)	Accuracy 96.094 (96.094)	mseValence 0.0143 (0.0143)	mseArousal 0.0066 (0.0066)
+[2024-04-10 10:02:20] __main__ INFO: Epoch: [25][40/96]	Loss 0.2913 (0.2892)	Accuracy 94.531 (95.808)	mseValence 0.0134 (0.0140)	mseArousal 0.0088 (0.0091)
+[2024-04-10 10:02:29] __main__ INFO: Epoch: [25][80/96]	Loss 0.3835 (0.2931)	Accuracy 94.531 (95.891)	mseValence 0.0168 (0.0137)	mseArousal 0.0108 (0.0091)
+[2024-04-10 10:02:33] __main__ INFO: Test: [ 0/24]	Loss 0.6760 (0.6760)	Accuracy 83.594 (83.594)
+[2024-04-10 10:02:35] __main__ INFO:  **** Accuracy 85.430 *** 
+[2024-04-10 10:02:35] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:02:36] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:02:37] __main__ INFO: Epoch: [26][ 0/96]	Loss 0.2578 (0.2578)	Accuracy 96.875 (96.875)	mseValence 0.0114 (0.0114)	mseArousal 0.0080 (0.0080)
+[2024-04-10 10:02:46] __main__ INFO: Epoch: [26][40/96]	Loss 0.2602 (0.2713)	Accuracy 96.094 (96.113)	mseValence 0.0122 (0.0128)	mseArousal 0.0075 (0.0083)
+[2024-04-10 10:02:55] __main__ INFO: Epoch: [26][80/96]	Loss 0.2560 (0.2659)	Accuracy 95.312 (96.412)	mseValence 0.0104 (0.0132)	mseArousal 0.0081 (0.0082)
+[2024-04-10 10:02:59] __main__ INFO: Test: [ 0/24]	Loss 0.5697 (0.5697)	Accuracy 85.156 (85.156)
+[2024-04-10 10:03:02] __main__ INFO:  **** Accuracy 89.211 *** 
+[2024-04-10 10:03:02] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:03:03] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:03:04] __main__ INFO: Epoch: [27][ 0/96]	Loss 0.2596 (0.2596)	Accuracy 96.094 (96.094)	mseValence 0.0109 (0.0109)	mseArousal 0.0070 (0.0070)
+[2024-04-10 10:03:13] __main__ INFO: Epoch: [27][40/96]	Loss 0.2626 (0.2636)	Accuracy 96.875 (96.608)	mseValence 0.0134 (0.0137)	mseArousal 0.0083 (0.0075)
+[2024-04-10 10:03:22] __main__ INFO: Epoch: [27][80/96]	Loss 0.2007 (0.2754)	Accuracy 96.875 (96.181)	mseValence 0.0099 (0.0137)	mseArousal 0.0059 (0.0079)
+[2024-04-10 10:03:26] __main__ INFO: Test: [ 0/24]	Loss 0.5596 (0.5596)	Accuracy 86.719 (86.719)
+[2024-04-10 10:03:29] __main__ INFO:  **** Accuracy 89.537 *** 
+[2024-04-10 10:03:29] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:03:29] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:03:30] __main__ INFO: Epoch: [28][ 0/96]	Loss 0.2116 (0.2116)	Accuracy 97.656 (97.656)	mseValence 0.0148 (0.0148)	mseArousal 0.0074 (0.0074)
+[2024-04-10 10:03:39] __main__ INFO: Epoch: [28][40/96]	Loss 0.3371 (0.2642)	Accuracy 95.312 (96.532)	mseValence 0.0142 (0.0133)	mseArousal 0.0104 (0.0079)
+[2024-04-10 10:03:48] __main__ INFO: Epoch: [28][80/96]	Loss 0.2083 (0.2548)	Accuracy 98.438 (96.663)	mseValence 0.0097 (0.0128)	mseArousal 0.0067 (0.0078)
+[2024-04-10 10:03:53] __main__ INFO: Test: [ 0/24]	Loss 0.5615 (0.5615)	Accuracy 85.156 (85.156)
+[2024-04-10 10:03:55] __main__ INFO:  **** Accuracy 88.950 *** 
+[2024-04-10 10:03:55] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:03:56] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:03:57] __main__ INFO: Epoch: [29][ 0/96]	Loss 0.1773 (0.1773)	Accuracy 96.875 (96.875)	mseValence 0.0085 (0.0085)	mseArousal 0.0059 (0.0059)
+[2024-04-10 10:04:06] __main__ INFO: Epoch: [29][40/96]	Loss 0.2417 (0.2305)	Accuracy 96.875 (97.275)	mseValence 0.0134 (0.0127)	mseArousal 0.0077 (0.0074)
+[2024-04-10 10:04:15] __main__ INFO: Epoch: [29][80/96]	Loss 0.2362 (0.2528)	Accuracy 97.656 (96.663)	mseValence 0.0154 (0.0126)	mseArousal 0.0094 (0.0075)
+[2024-04-10 10:04:19] __main__ INFO: Test: [ 0/24]	Loss 0.8042 (0.8042)	Accuracy 81.250 (81.250)
+[2024-04-10 10:04:22] __main__ INFO:  **** Accuracy 85.463 *** 
+[2024-04-10 10:04:22] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:04:22] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:04:23] __main__ INFO: Epoch: [30][ 0/96]	Loss 0.1830 (0.1830)	Accuracy 98.438 (98.438)	mseValence 0.0080 (0.0080)	mseArousal 0.0080 (0.0080)
+[2024-04-10 10:04:32] __main__ INFO: Epoch: [30][40/96]	Loss 0.2872 (0.2477)	Accuracy 96.094 (96.837)	mseValence 0.0167 (0.0129)	mseArousal 0.0079 (0.0074)
+[2024-04-10 10:04:42] __main__ INFO: Epoch: [30][80/96]	Loss 0.1757 (0.2431)	Accuracy 98.438 (96.798)	mseValence 0.0096 (0.0127)	mseArousal 0.0071 (0.0074)
+[2024-04-10 10:04:46] __main__ INFO: Test: [ 0/24]	Loss 0.4922 (0.4922)	Accuracy 85.938 (85.938)
+[2024-04-10 10:04:49] __main__ INFO:  **** Accuracy 88.983 *** 
+[2024-04-10 10:04:49] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:04:49] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:04:50] __main__ INFO: Epoch: [31][ 0/96]	Loss 0.1942 (0.1942)	Accuracy 98.438 (98.438)	mseValence 0.0098 (0.0098)	mseArousal 0.0066 (0.0066)
+[2024-04-10 10:04:59] __main__ INFO: Epoch: [31][40/96]	Loss 0.3739 (0.2206)	Accuracy 93.750 (97.027)	mseValence 0.0181 (0.0114)	mseArousal 0.0068 (0.0067)
+[2024-04-10 10:05:08] __main__ INFO: Epoch: [31][80/96]	Loss 0.2282 (0.2352)	Accuracy 96.875 (96.701)	mseValence 0.0095 (0.0119)	mseArousal 0.0068 (0.0070)
+[2024-04-10 10:05:13] __main__ INFO: Test: [ 0/24]	Loss 0.5086 (0.5086)	Accuracy 84.375 (84.375)
+[2024-04-10 10:05:15] __main__ INFO:  **** Accuracy 89.602 *** 
+[2024-04-10 10:05:15] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:05:16] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:05:17] __main__ INFO: Epoch: [32][ 0/96]	Loss 0.2884 (0.2884)	Accuracy 97.656 (97.656)	mseValence 0.0070 (0.0070)	mseArousal 0.0136 (0.0136)
+[2024-04-10 10:05:26] __main__ INFO: Epoch: [32][40/96]	Loss 0.2209 (0.2185)	Accuracy 96.875 (97.294)	mseValence 0.0112 (0.0115)	mseArousal 0.0046 (0.0072)
+[2024-04-10 10:05:35] __main__ INFO: Epoch: [32][80/96]	Loss 0.3667 (0.2232)	Accuracy 96.094 (97.126)	mseValence 0.0171 (0.0116)	mseArousal 0.0071 (0.0070)
+[2024-04-10 10:05:39] __main__ INFO: Test: [ 0/24]	Loss 0.4539 (0.4539)	Accuracy 88.281 (88.281)
+[2024-04-10 10:05:42] __main__ INFO:  **** Accuracy 89.407 *** 
+[2024-04-10 10:05:42] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:05:42] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:05:44] __main__ INFO: Epoch: [33][ 0/96]	Loss 0.2368 (0.2368)	Accuracy 97.656 (97.656)	mseValence 0.0174 (0.0174)	mseArousal 0.0057 (0.0057)
+[2024-04-10 10:05:53] __main__ INFO: Epoch: [33][40/96]	Loss 0.2164 (0.2051)	Accuracy 97.656 (97.561)	mseValence 0.0136 (0.0114)	mseArousal 0.0047 (0.0062)
+[2024-04-10 10:06:02] __main__ INFO: Epoch: [33][80/96]	Loss 0.2573 (0.2153)	Accuracy 96.094 (97.164)	mseValence 0.0093 (0.0113)	mseArousal 0.0087 (0.0067)
+[2024-04-10 10:06:06] __main__ INFO: Test: [ 0/24]	Loss 0.6165 (0.6165)	Accuracy 82.812 (82.812)
+[2024-04-10 10:06:09] __main__ INFO:  **** Accuracy 88.364 *** 
+[2024-04-10 10:06:09] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:06:09] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:06:10] __main__ INFO: Epoch: [34][ 0/96]	Loss 0.1320 (0.1320)	Accuracy 96.875 (96.875)	mseValence 0.0053 (0.0053)	mseArousal 0.0045 (0.0045)
+[2024-04-10 10:06:19] __main__ INFO: Epoch: [34][40/96]	Loss 0.2199 (0.2260)	Accuracy 96.875 (96.970)	mseValence 0.0116 (0.0110)	mseArousal 0.0059 (0.0067)
+[2024-04-10 10:06:28] __main__ INFO: Epoch: [34][80/96]	Loss 0.2382 (0.2258)	Accuracy 95.312 (97.000)	mseValence 0.0099 (0.0108)	mseArousal 0.0046 (0.0069)
+[2024-04-10 10:06:33] __main__ INFO: Test: [ 0/24]	Loss 0.7277 (0.7277)	Accuracy 81.250 (81.250)
+[2024-04-10 10:06:35] __main__ INFO:  **** Accuracy 87.647 *** 
+[2024-04-10 10:06:35] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:06:36] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:06:37] __main__ INFO: Epoch: [35][ 0/96]	Loss 0.2277 (0.2277)	Accuracy 94.531 (94.531)	mseValence 0.0082 (0.0082)	mseArousal 0.0054 (0.0054)
+[2024-04-10 10:06:46] __main__ INFO: Epoch: [35][40/96]	Loss 0.1338 (0.2188)	Accuracy 99.219 (97.027)	mseValence 0.0085 (0.0105)	mseArousal 0.0044 (0.0070)
+[2024-04-10 10:06:55] __main__ INFO: Epoch: [35][80/96]	Loss 0.2453 (0.2294)	Accuracy 94.531 (96.721)	mseValence 0.0108 (0.0110)	mseArousal 0.0062 (0.0070)
+[2024-04-10 10:06:59] __main__ INFO: Test: [ 0/24]	Loss 0.6265 (0.6265)	Accuracy 85.938 (85.938)
+[2024-04-10 10:07:02] __main__ INFO:  **** Accuracy 88.038 *** 
+[2024-04-10 10:07:02] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:07:03] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:07:04] __main__ INFO: Epoch: [36][ 0/96]	Loss 0.2655 (0.2655)	Accuracy 96.094 (96.094)	mseValence 0.0132 (0.0132)	mseArousal 0.0055 (0.0055)
+[2024-04-10 10:07:13] __main__ INFO: Epoch: [36][40/96]	Loss 0.2527 (0.2278)	Accuracy 98.438 (97.275)	mseValence 0.0212 (0.0123)	mseArousal 0.0061 (0.0070)
+[2024-04-10 10:07:22] __main__ INFO: Epoch: [36][80/96]	Loss 0.3616 (0.2249)	Accuracy 93.750 (97.261)	mseValence 0.0156 (0.0120)	mseArousal 0.0093 (0.0069)
+[2024-04-10 10:07:26] __main__ INFO: Test: [ 0/24]	Loss 0.5838 (0.5838)	Accuracy 85.156 (85.156)
+[2024-04-10 10:07:28] __main__ INFO:  **** Accuracy 88.494 *** 
+[2024-04-10 10:07:28] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:07:29] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:07:30] __main__ INFO: Epoch: [37][ 0/96]	Loss 0.1630 (0.1630)	Accuracy 98.438 (98.438)	mseValence 0.0087 (0.0087)	mseArousal 0.0060 (0.0060)
+[2024-04-10 10:07:39] __main__ INFO: Epoch: [37][40/96]	Loss 0.2059 (0.1947)	Accuracy 97.656 (97.618)	mseValence 0.0111 (0.0105)	mseArousal 0.0072 (0.0063)
+[2024-04-10 10:07:48] __main__ INFO: Epoch: [37][80/96]	Loss 0.2633 (0.1976)	Accuracy 95.312 (97.405)	mseValence 0.0105 (0.0103)	mseArousal 0.0103 (0.0064)
+[2024-04-10 10:07:52] __main__ INFO: Test: [ 0/24]	Loss 0.9410 (0.9410)	Accuracy 82.031 (82.031)
+[2024-04-10 10:07:55] __main__ INFO:  **** Accuracy 86.734 *** 
+[2024-04-10 10:07:55] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:07:56] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:07:57] __main__ INFO: Epoch: [38][ 0/96]	Loss 0.1914 (0.1914)	Accuracy 97.656 (97.656)	mseValence 0.0102 (0.0102)	mseArousal 0.0087 (0.0087)
+[2024-04-10 10:08:06] __main__ INFO: Epoch: [38][40/96]	Loss 0.3028 (0.2032)	Accuracy 96.875 (97.618)	mseValence 0.0140 (0.0106)	mseArousal 0.0066 (0.0068)
+[2024-04-10 10:08:15] __main__ INFO: Epoch: [38][80/96]	Loss 0.2101 (0.2143)	Accuracy 98.438 (97.473)	mseValence 0.0132 (0.0111)	mseArousal 0.0066 (0.0069)
+[2024-04-10 10:08:19] __main__ INFO: Test: [ 0/24]	Loss 0.5441 (0.5441)	Accuracy 86.719 (86.719)
+[2024-04-10 10:08:22] __main__ INFO:  **** Accuracy 88.820 *** 
+[2024-04-10 10:08:22] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:08:22] __main__ INFO: Current learning rate: 0.001
+[2024-04-10 10:08:23] __main__ INFO: Epoch: [39][ 0/96]	Loss 0.1753 (0.1753)	Accuracy 97.656 (97.656)	mseValence 0.0079 (0.0079)	mseArousal 0.0059 (0.0059)
+[2024-04-10 10:08:32] __main__ INFO: Epoch: [39][40/96]	Loss 0.2274 (0.2019)	Accuracy 95.312 (97.351)	mseValence 0.0089 (0.0108)	mseArousal 0.0103 (0.0061)
+[2024-04-10 10:08:41] __main__ INFO: Epoch: [39][80/96]	Loss 0.2319 (0.2059)	Accuracy 97.656 (97.029)	mseValence 0.0104 (0.0105)	mseArousal 0.0098 (0.0064)
+[2024-04-10 10:08:52] __main__ INFO: Epoch: [39][   0/2217]	Loss 6.3193 (6.3193)	mseValence 0.1209 (0.1209)	mseArousal 0.1247 (0.1247)
+[2024-04-10 10:10:17] __main__ INFO: Epoch: [39][ 200/2217]	Loss 2.7028 (2.8601)	mseValence 0.0918 (0.0907)	mseArousal 0.0972 (0.0941)
+[2024-04-10 10:11:07] __main__ INFO: Epoch: [39][ 400/2217]	Loss 2.3268 (2.6842)	mseValence 0.0774 (0.0850)	mseArousal 0.0697 (0.0891)
+[2024-04-10 10:11:55] __main__ INFO: Epoch: [39][ 600/2217]	Loss 2.3308 (2.5963)	mseValence 0.0945 (0.0819)	mseArousal 0.0587 (0.0866)
+[2024-04-10 10:12:41] __main__ INFO: Epoch: [39][ 800/2217]	Loss 2.1604 (2.5427)	mseValence 0.0594 (0.0802)	mseArousal 0.0662 (0.0846)
+[2024-04-10 10:13:27] __main__ INFO: Epoch: [39][1000/2217]	Loss 2.3758 (2.5050)	mseValence 0.0792 (0.0789)	mseArousal 0.0756 (0.0833)
+[2024-04-10 10:14:15] __main__ INFO: Epoch: [39][1200/2217]	Loss 2.3653 (2.4803)	mseValence 0.0687 (0.0781)	mseArousal 0.0862 (0.0826)
+[2024-04-10 10:15:02] __main__ INFO: Epoch: [39][1400/2217]	Loss 2.2885 (2.4571)	mseValence 0.0706 (0.0772)	mseArousal 0.0746 (0.0818)
+[2024-04-10 10:15:48] __main__ INFO: Epoch: [39][1600/2217]	Loss 2.2885 (2.4374)	mseValence 0.0838 (0.0767)	mseArousal 0.0814 (0.0810)
+[2024-04-10 10:16:34] __main__ INFO: Epoch: [39][1800/2217]	Loss 2.4117 (2.4177)	mseValence 0.0754 (0.0759)	mseArousal 0.0720 (0.0802)
+[2024-04-10 10:17:20] __main__ INFO: Epoch: [39][2000/2217]	Loss 2.3925 (2.4022)	mseValence 0.0748 (0.0753)	mseArousal 0.0834 (0.0796)
+[2024-04-10 10:18:06] __main__ INFO: Epoch: [39][2200/2217]	Loss 2.2331 (2.3874)	mseValence 0.0728 (0.0748)	mseArousal 0.0586 (0.0790)
+[2024-04-10 10:18:12] __main__ INFO: Test: [ 0/24]	Loss 0.7206 (0.7206)	Accuracy 78.906 (78.906)
+[2024-04-10 10:18:15] __main__ INFO:  **** Accuracy 76.336 *** 
+[2024-04-10 10:18:15] __main__ INFO: Current best accuracy: 90.12385559082031
+[2024-04-10 10:18:15] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:18:18] __main__ INFO: Epoch: [40][ 0/96]	Loss 1.7878 (1.7878)	Accuracy 67.188 (67.188)	mseValence 0.0523 (0.0523)	mseArousal 0.0461 (0.0461)
+[2024-04-10 10:18:28] __main__ INFO: Epoch: [40][40/96]	Loss 0.7952 (0.9988)	Accuracy 85.156 (79.249)	mseValence 0.0272 (0.0313)	mseArousal 0.0158 (0.0197)
+[2024-04-10 10:18:37] __main__ INFO: Epoch: [40][80/96]	Loss 0.6604 (0.8361)	Accuracy 89.844 (82.591)	mseValence 0.0237 (0.0264)	mseArousal 0.0149 (0.0163)
+[2024-04-10 10:18:41] __main__ INFO: Test: [ 0/24]	Loss 0.3691 (0.3691)	Accuracy 85.938 (85.938)
+[2024-04-10 10:18:44] __main__ INFO:  **** Accuracy 91.265 *** 
+[2024-04-10 10:18:44] __main__ INFO: Current best accuracy: 91.26466369628906
+[2024-04-10 10:18:45] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:18:46] __main__ INFO: Epoch: [41][ 0/96]	Loss 0.6094 (0.6094)	Accuracy 87.500 (87.500)	mseValence 0.0233 (0.0233)	mseArousal 0.0111 (0.0111)
+[2024-04-10 10:18:55] __main__ INFO: Epoch: [41][40/96]	Loss 0.6522 (0.5603)	Accuracy 88.281 (88.948)	mseValence 0.0197 (0.0181)	mseArousal 0.0115 (0.0114)
+[2024-04-10 10:19:04] __main__ INFO: Epoch: [41][80/96]	Loss 0.7200 (0.5446)	Accuracy 83.594 (88.879)	mseValence 0.0195 (0.0177)	mseArousal 0.0152 (0.0109)
+[2024-04-10 10:19:08] __main__ INFO: Test: [ 0/24]	Loss 0.3426 (0.3426)	Accuracy 88.281 (88.281)
+[2024-04-10 10:19:11] __main__ INFO:  **** Accuracy 91.362 *** 
+[2024-04-10 10:19:11] __main__ INFO: Current best accuracy: 91.3624496459961
+[2024-04-10 10:19:12] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:19:13] __main__ INFO: Epoch: [42][ 0/96]	Loss 0.4447 (0.4447)	Accuracy 89.062 (89.062)	mseValence 0.0162 (0.0162)	mseArousal 0.0085 (0.0085)
+[2024-04-10 10:19:22] __main__ INFO: Epoch: [42][40/96]	Loss 0.4023 (0.4522)	Accuracy 91.406 (91.082)	mseValence 0.0160 (0.0154)	mseArousal 0.0086 (0.0092)
+[2024-04-10 10:19:31] __main__ INFO: Epoch: [42][80/96]	Loss 0.3500 (0.4363)	Accuracy 91.406 (91.696)	mseValence 0.0123 (0.0153)	mseArousal 0.0077 (0.0093)
+[2024-04-10 10:19:35] __main__ INFO: Test: [ 0/24]	Loss 0.3888 (0.3888)	Accuracy 87.500 (87.500)
+[2024-04-10 10:19:38] __main__ INFO:  **** Accuracy 92.894 *** 
+[2024-04-10 10:19:38] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:19:39] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:19:40] __main__ INFO: Epoch: [43][ 0/96]	Loss 0.4173 (0.4173)	Accuracy 93.750 (93.750)	mseValence 0.0148 (0.0148)	mseArousal 0.0152 (0.0152)
+[2024-04-10 10:19:49] __main__ INFO: Epoch: [43][40/96]	Loss 0.3735 (0.3475)	Accuracy 92.188 (93.807)	mseValence 0.0160 (0.0132)	mseArousal 0.0060 (0.0084)
+[2024-04-10 10:19:58] __main__ INFO: Epoch: [43][80/96]	Loss 0.2913 (0.3512)	Accuracy 96.875 (93.567)	mseValence 0.0135 (0.0132)	mseArousal 0.0076 (0.0083)
+[2024-04-10 10:20:02] __main__ INFO: Test: [ 0/24]	Loss 0.4497 (0.4497)	Accuracy 84.375 (84.375)
+[2024-04-10 10:20:05] __main__ INFO:  **** Accuracy 91.982 *** 
+[2024-04-10 10:20:05] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:20:05] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:20:07] __main__ INFO: Epoch: [44][ 0/96]	Loss 0.2658 (0.2658)	Accuracy 96.875 (96.875)	mseValence 0.0145 (0.0145)	mseArousal 0.0082 (0.0082)
+[2024-04-10 10:20:15] __main__ INFO: Epoch: [44][40/96]	Loss 0.1938 (0.2792)	Accuracy 97.656 (95.617)	mseValence 0.0098 (0.0121)	mseArousal 0.0065 (0.0078)
+[2024-04-10 10:20:24] __main__ INFO: Epoch: [44][80/96]	Loss 0.4465 (0.2947)	Accuracy 90.625 (95.110)	mseValence 0.0143 (0.0123)	mseArousal 0.0083 (0.0079)
+[2024-04-10 10:20:29] __main__ INFO: Test: [ 0/24]	Loss 0.3992 (0.3992)	Accuracy 87.500 (87.500)
+[2024-04-10 10:20:31] __main__ INFO:  **** Accuracy 91.982 *** 
+[2024-04-10 10:20:31] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:20:32] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:20:33] __main__ INFO: Epoch: [45][ 0/96]	Loss 0.2327 (0.2327)	Accuracy 95.312 (95.312)	mseValence 0.0091 (0.0091)	mseArousal 0.0062 (0.0062)
+[2024-04-10 10:20:42] __main__ INFO: Epoch: [45][40/96]	Loss 0.2412 (0.2566)	Accuracy 96.875 (96.189)	mseValence 0.0084 (0.0115)	mseArousal 0.0074 (0.0075)
+[2024-04-10 10:20:51] __main__ INFO: Epoch: [45][80/96]	Loss 0.3574 (0.2539)	Accuracy 95.312 (96.258)	mseValence 0.0169 (0.0115)	mseArousal 0.0071 (0.0075)
+[2024-04-10 10:20:55] __main__ INFO: Test: [ 0/24]	Loss 0.5917 (0.5917)	Accuracy 82.031 (82.031)
+[2024-04-10 10:20:58] __main__ INFO:  **** Accuracy 91.069 *** 
+[2024-04-10 10:20:58] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:20:59] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:21:00] __main__ INFO: Epoch: [46][ 0/96]	Loss 0.1995 (0.1995)	Accuracy 96.875 (96.875)	mseValence 0.0093 (0.0093)	mseArousal 0.0077 (0.0077)
+[2024-04-10 10:21:09] __main__ INFO: Epoch: [46][40/96]	Loss 0.1804 (0.2328)	Accuracy 100.000 (96.970)	mseValence 0.0090 (0.0112)	mseArousal 0.0090 (0.0077)
+[2024-04-10 10:21:18] __main__ INFO: Epoch: [46][80/96]	Loss 0.2096 (0.2404)	Accuracy 96.094 (96.856)	mseValence 0.0112 (0.0120)	mseArousal 0.0047 (0.0075)
+[2024-04-10 10:21:22] __main__ INFO: Test: [ 0/24]	Loss 0.4874 (0.4874)	Accuracy 87.500 (87.500)
+[2024-04-10 10:21:25] __main__ INFO:  **** Accuracy 91.982 *** 
+[2024-04-10 10:21:25] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:21:26] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:21:27] __main__ INFO: Epoch: [47][ 0/96]	Loss 0.2612 (0.2612)	Accuracy 96.094 (96.094)	mseValence 0.0111 (0.0111)	mseArousal 0.0068 (0.0068)
+[2024-04-10 10:21:36] __main__ INFO: Epoch: [47][40/96]	Loss 0.2784 (0.2069)	Accuracy 96.875 (97.675)	mseValence 0.0165 (0.0116)	mseArousal 0.0081 (0.0063)
+[2024-04-10 10:21:45] __main__ INFO: Epoch: [47][80/96]	Loss 0.1586 (0.2101)	Accuracy 99.219 (97.502)	mseValence 0.0100 (0.0110)	mseArousal 0.0062 (0.0063)
+[2024-04-10 10:21:49] __main__ INFO: Test: [ 0/24]	Loss 0.6235 (0.6235)	Accuracy 84.375 (84.375)
+[2024-04-10 10:21:52] __main__ INFO:  **** Accuracy 92.210 *** 
+[2024-04-10 10:21:52] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:21:52] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:21:53] __main__ INFO: Epoch: [48][ 0/96]	Loss 0.1699 (0.1699)	Accuracy 97.656 (97.656)	mseValence 0.0080 (0.0080)	mseArousal 0.0076 (0.0076)
+[2024-04-10 10:22:02] __main__ INFO: Epoch: [48][40/96]	Loss 0.2348 (0.1795)	Accuracy 96.094 (97.790)	mseValence 0.0124 (0.0091)	mseArousal 0.0051 (0.0060)
+[2024-04-10 10:22:11] __main__ INFO: Epoch: [48][80/96]	Loss 0.1563 (0.1868)	Accuracy 98.438 (97.743)	mseValence 0.0086 (0.0097)	mseArousal 0.0064 (0.0059)
+[2024-04-10 10:22:15] __main__ INFO: Test: [ 0/24]	Loss 0.5043 (0.5043)	Accuracy 87.500 (87.500)
+[2024-04-10 10:22:18] __main__ INFO:  **** Accuracy 91.428 *** 
+[2024-04-10 10:22:18] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:22:19] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:22:20] __main__ INFO: Epoch: [49][ 0/96]	Loss 0.1330 (0.1330)	Accuracy 98.438 (98.438)	mseValence 0.0055 (0.0055)	mseArousal 0.0048 (0.0048)
+[2024-04-10 10:22:29] __main__ INFO: Epoch: [49][40/96]	Loss 0.1106 (0.1751)	Accuracy 98.438 (97.904)	mseValence 0.0075 (0.0085)	mseArousal 0.0032 (0.0060)
+[2024-04-10 10:22:38] __main__ INFO: Epoch: [49][80/96]	Loss 0.1483 (0.1802)	Accuracy 99.219 (97.704)	mseValence 0.0086 (0.0089)	mseArousal 0.0068 (0.0059)
+[2024-04-10 10:22:46] __main__ INFO: Epoch: [49][   0/2217]	Loss 3.9488 (3.9488)	mseValence 0.0827 (0.0827)	mseArousal 0.1084 (0.1084)
+[2024-04-10 10:23:53] __main__ INFO: Epoch: [49][ 200/2217]	Loss 2.0995 (2.2949)	mseValence 0.0640 (0.0683)	mseArousal 0.0658 (0.0753)
+[2024-04-10 10:24:41] __main__ INFO: Epoch: [49][ 400/2217]	Loss 1.8703 (2.2177)	mseValence 0.0528 (0.0669)	mseArousal 0.0611 (0.0727)
+[2024-04-10 10:25:27] __main__ INFO: Epoch: [49][ 600/2217]	Loss 2.0945 (2.1840)	mseValence 0.0678 (0.0661)	mseArousal 0.0624 (0.0716)
+[2024-04-10 10:26:13] __main__ INFO: Epoch: [49][ 800/2217]	Loss 2.0196 (2.1623)	mseValence 0.0495 (0.0656)	mseArousal 0.0730 (0.0707)
+[2024-04-10 10:27:00] __main__ INFO: Epoch: [49][1000/2217]	Loss 1.9453 (2.1425)	mseValence 0.0681 (0.0650)	mseArousal 0.0579 (0.0700)
+[2024-04-10 10:27:46] __main__ INFO: Epoch: [49][1200/2217]	Loss 2.1906 (2.1279)	mseValence 0.0606 (0.0647)	mseArousal 0.0756 (0.0696)
+[2024-04-10 10:28:32] __main__ INFO: Epoch: [49][1400/2217]	Loss 1.8738 (2.1120)	mseValence 0.0499 (0.0641)	mseArousal 0.0642 (0.0690)
+[2024-04-10 10:29:18] __main__ INFO: Epoch: [49][1600/2217]	Loss 1.9634 (2.0952)	mseValence 0.0541 (0.0635)	mseArousal 0.0617 (0.0684)
+[2024-04-10 10:30:04] __main__ INFO: Epoch: [49][1800/2217]	Loss 1.9224 (2.0828)	mseValence 0.0518 (0.0633)	mseArousal 0.0659 (0.0679)
+[2024-04-10 10:30:50] __main__ INFO: Epoch: [49][2000/2217]	Loss 2.0930 (2.0697)	mseValence 0.0748 (0.0629)	mseArousal 0.0618 (0.0674)
+[2024-04-10 10:31:37] __main__ INFO: Epoch: [49][2200/2217]	Loss 1.7847 (2.0580)	mseValence 0.0552 (0.0625)	mseArousal 0.0417 (0.0670)
+[2024-04-10 10:31:42] __main__ INFO: Test: [ 0/24]	Loss 0.5407 (0.5407)	Accuracy 83.594 (83.594)
+[2024-04-10 10:31:46] __main__ INFO:  **** Accuracy 82.008 *** 
+[2024-04-10 10:31:46] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:31:47] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:31:50] __main__ INFO: Epoch: [50][ 0/96]	Loss 1.6252 (1.6252)	Accuracy 59.375 (59.375)	mseValence 0.0514 (0.0514)	mseArousal 0.0351 (0.0351)
+[2024-04-10 10:32:00] __main__ INFO: Epoch: [50][40/96]	Loss 0.6680 (0.7283)	Accuracy 86.719 (85.709)	mseValence 0.0153 (0.0250)	mseArousal 0.0122 (0.0159)
+[2024-04-10 10:32:09] __main__ INFO: Epoch: [50][80/96]	Loss 0.3568 (0.6023)	Accuracy 92.188 (88.262)	mseValence 0.0141 (0.0212)	mseArousal 0.0086 (0.0130)
+[2024-04-10 10:32:14] __main__ INFO: Test: [ 0/24]	Loss 0.3671 (0.3671)	Accuracy 89.062 (89.062)
+[2024-04-10 10:32:16] __main__ INFO:  **** Accuracy 92.601 *** 
+[2024-04-10 10:32:16] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:32:17] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:32:18] __main__ INFO: Epoch: [51][ 0/96]	Loss 0.4603 (0.4603)	Accuracy 92.188 (92.188)	mseValence 0.0215 (0.0215)	mseArousal 0.0115 (0.0115)
+[2024-04-10 10:32:27] __main__ INFO: Epoch: [51][40/96]	Loss 0.2879 (0.3459)	Accuracy 96.094 (93.617)	mseValence 0.0109 (0.0140)	mseArousal 0.0082 (0.0084)
+[2024-04-10 10:32:36] __main__ INFO: Epoch: [51][80/96]	Loss 0.3416 (0.3283)	Accuracy 92.969 (94.300)	mseValence 0.0089 (0.0139)	mseArousal 0.0060 (0.0081)
+[2024-04-10 10:32:40] __main__ INFO: Test: [ 0/24]	Loss 0.3721 (0.3721)	Accuracy 90.625 (90.625)
+[2024-04-10 10:32:43] __main__ INFO:  **** Accuracy 92.666 *** 
+[2024-04-10 10:32:43] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:32:44] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:32:45] __main__ INFO: Epoch: [52][ 0/96]	Loss 0.2099 (0.2099)	Accuracy 99.219 (99.219)	mseValence 0.0109 (0.0109)	mseArousal 0.0090 (0.0090)
+[2024-04-10 10:32:54] __main__ INFO: Epoch: [52][40/96]	Loss 0.1920 (0.2371)	Accuracy 97.656 (96.837)	mseValence 0.0112 (0.0111)	mseArousal 0.0068 (0.0073)
+[2024-04-10 10:33:03] __main__ INFO: Epoch: [52][80/96]	Loss 0.2390 (0.2420)	Accuracy 96.875 (96.499)	mseValence 0.0108 (0.0110)	mseArousal 0.0098 (0.0072)
+[2024-04-10 10:33:07] __main__ INFO: Test: [ 0/24]	Loss 0.4223 (0.4223)	Accuracy 88.281 (88.281)
+[2024-04-10 10:33:10] __main__ INFO:  **** Accuracy 91.623 *** 
+[2024-04-10 10:33:10] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:33:10] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:33:11] __main__ INFO: Epoch: [53][ 0/96]	Loss 0.1777 (0.1777)	Accuracy 96.875 (96.875)	mseValence 0.0092 (0.0092)	mseArousal 0.0061 (0.0061)
+[2024-04-10 10:33:20] __main__ INFO: Epoch: [53][40/96]	Loss 0.1692 (0.2101)	Accuracy 96.875 (97.199)	mseValence 0.0064 (0.0099)	mseArousal 0.0081 (0.0067)
+[2024-04-10 10:33:29] __main__ INFO: Epoch: [53][80/96]	Loss 0.1914 (0.2054)	Accuracy 97.656 (97.405)	mseValence 0.0112 (0.0101)	mseArousal 0.0066 (0.0067)
+[2024-04-10 10:33:34] __main__ INFO: Test: [ 0/24]	Loss 0.5143 (0.5143)	Accuracy 85.938 (85.938)
+[2024-04-10 10:33:36] __main__ INFO:  **** Accuracy 91.688 *** 
+[2024-04-10 10:33:36] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:33:37] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:33:38] __main__ INFO: Epoch: [54][ 0/96]	Loss 0.1843 (0.1843)	Accuracy 96.094 (96.094)	mseValence 0.0055 (0.0055)	mseArousal 0.0053 (0.0053)
+[2024-04-10 10:33:47] __main__ INFO: Epoch: [54][40/96]	Loss 0.1882 (0.1838)	Accuracy 97.656 (97.980)	mseValence 0.0102 (0.0098)	mseArousal 0.0068 (0.0060)
+[2024-04-10 10:33:56] __main__ INFO: Epoch: [54][80/96]	Loss 0.1515 (0.1860)	Accuracy 100.000 (97.946)	mseValence 0.0101 (0.0101)	mseArousal 0.0068 (0.0060)
+[2024-04-10 10:34:00] __main__ INFO: Test: [ 0/24]	Loss 0.4304 (0.4304)	Accuracy 87.500 (87.500)
+[2024-04-10 10:34:03] __main__ INFO:  **** Accuracy 91.884 *** 
+[2024-04-10 10:34:03] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:34:03] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:34:04] __main__ INFO: Epoch: [55][ 0/96]	Loss 0.1224 (0.1224)	Accuracy 99.219 (99.219)	mseValence 0.0079 (0.0079)	mseArousal 0.0052 (0.0052)
+[2024-04-10 10:34:13] __main__ INFO: Epoch: [55][40/96]	Loss 0.1221 (0.1547)	Accuracy 98.438 (98.304)	mseValence 0.0074 (0.0086)	mseArousal 0.0046 (0.0051)
+[2024-04-10 10:34:22] __main__ INFO: Epoch: [55][80/96]	Loss 0.1146 (0.1603)	Accuracy 100.000 (98.245)	mseValence 0.0071 (0.0088)	mseArousal 0.0052 (0.0055)
+[2024-04-10 10:34:27] __main__ INFO: Test: [ 0/24]	Loss 0.4503 (0.4503)	Accuracy 88.281 (88.281)
+[2024-04-10 10:34:30] __main__ INFO:  **** Accuracy 92.177 *** 
+[2024-04-10 10:34:30] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:34:30] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:34:31] __main__ INFO: Epoch: [56][ 0/96]	Loss 0.1821 (0.1821)	Accuracy 97.656 (97.656)	mseValence 0.0076 (0.0076)	mseArousal 0.0058 (0.0058)
+[2024-04-10 10:34:40] __main__ INFO: Epoch: [56][40/96]	Loss 0.1067 (0.1582)	Accuracy 98.438 (98.323)	mseValence 0.0061 (0.0080)	mseArousal 0.0038 (0.0055)
+[2024-04-10 10:34:49] __main__ INFO: Epoch: [56][80/96]	Loss 0.1233 (0.1538)	Accuracy 97.656 (98.245)	mseValence 0.0061 (0.0079)	mseArousal 0.0044 (0.0053)
+[2024-04-10 10:34:53] __main__ INFO: Test: [ 0/24]	Loss 0.5280 (0.5280)	Accuracy 87.500 (87.500)
+[2024-04-10 10:34:56] __main__ INFO:  **** Accuracy 91.623 *** 
+[2024-04-10 10:34:56] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:34:56] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:34:57] __main__ INFO: Epoch: [57][ 0/96]	Loss 0.1817 (0.1817)	Accuracy 97.656 (97.656)	mseValence 0.0070 (0.0070)	mseArousal 0.0034 (0.0034)
+[2024-04-10 10:35:06] __main__ INFO: Epoch: [57][40/96]	Loss 0.1248 (0.1523)	Accuracy 98.438 (98.514)	mseValence 0.0074 (0.0081)	mseArousal 0.0047 (0.0050)
+[2024-04-10 10:35:15] __main__ INFO: Epoch: [57][80/96]	Loss 0.1940 (0.1487)	Accuracy 96.875 (98.515)	mseValence 0.0087 (0.0080)	mseArousal 0.0055 (0.0051)
+[2024-04-10 10:35:20] __main__ INFO: Test: [ 0/24]	Loss 0.5363 (0.5363)	Accuracy 87.500 (87.500)
+[2024-04-10 10:35:22] __main__ INFO:  **** Accuracy 91.623 *** 
+[2024-04-10 10:35:22] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:35:23] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:35:24] __main__ INFO: Epoch: [58][ 0/96]	Loss 0.1149 (0.1149)	Accuracy 100.000 (100.000)	mseValence 0.0078 (0.0078)	mseArousal 0.0050 (0.0050)
+[2024-04-10 10:35:33] __main__ INFO: Epoch: [58][40/96]	Loss 0.2077 (0.1265)	Accuracy 96.875 (98.819)	mseValence 0.0092 (0.0072)	mseArousal 0.0051 (0.0044)
+[2024-04-10 10:35:42] __main__ INFO: Epoch: [58][80/96]	Loss 0.1563 (0.1362)	Accuracy 96.875 (98.601)	mseValence 0.0082 (0.0076)	mseArousal 0.0049 (0.0046)
+[2024-04-10 10:35:46] __main__ INFO: Test: [ 0/24]	Loss 0.5447 (0.5447)	Accuracy 87.500 (87.500)
+[2024-04-10 10:35:49] __main__ INFO:  **** Accuracy 91.884 *** 
+[2024-04-10 10:35:49] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:35:49] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:35:50] __main__ INFO: Epoch: [59][ 0/96]	Loss 0.1249 (0.1249)	Accuracy 98.438 (98.438)	mseValence 0.0069 (0.0069)	mseArousal 0.0041 (0.0041)
+[2024-04-10 10:35:59] __main__ INFO: Epoch: [59][40/96]	Loss 0.1571 (0.1261)	Accuracy 96.875 (98.838)	mseValence 0.0077 (0.0074)	mseArousal 0.0059 (0.0046)
+[2024-04-10 10:36:08] __main__ INFO: Epoch: [59][80/96]	Loss 0.1616 (0.1264)	Accuracy 97.656 (98.756)	mseValence 0.0097 (0.0073)	mseArousal 0.0057 (0.0045)
+[2024-04-10 10:36:18] __main__ INFO: Epoch: [59][   0/2217]	Loss 3.7845 (3.7845)	mseValence 0.0692 (0.0692)	mseArousal 0.0805 (0.0805)
+[2024-04-10 10:37:37] __main__ INFO: Epoch: [59][ 200/2217]	Loss 2.1234 (2.0658)	mseValence 0.0787 (0.0611)	mseArousal 0.0664 (0.0668)
+[2024-04-10 10:38:26] __main__ INFO: Epoch: [59][ 400/2217]	Loss 2.0566 (2.0180)	mseValence 0.0615 (0.0608)	mseArousal 0.0652 (0.0650)
+[2024-04-10 10:39:12] __main__ INFO: Epoch: [59][ 600/2217]	Loss 2.1775 (1.9817)	mseValence 0.0735 (0.0600)	mseArousal 0.0683 (0.0639)
+[2024-04-10 10:39:58] __main__ INFO: Epoch: [59][ 800/2217]	Loss 1.9964 (1.9600)	mseValence 0.0569 (0.0598)	mseArousal 0.0750 (0.0630)
+[2024-04-10 10:40:44] __main__ INFO: Epoch: [59][1000/2217]	Loss 1.7467 (1.9382)	mseValence 0.0501 (0.0593)	mseArousal 0.0621 (0.0622)
+[2024-04-10 10:41:30] __main__ INFO: Epoch: [59][1200/2217]	Loss 1.9718 (1.9202)	mseValence 0.0615 (0.0587)	mseArousal 0.0732 (0.0616)
+[2024-04-10 10:42:16] __main__ INFO: Epoch: [59][1400/2217]	Loss 1.7119 (1.9011)	mseValence 0.0605 (0.0583)	mseArousal 0.0453 (0.0610)
+[2024-04-10 10:43:02] __main__ INFO: Epoch: [59][1600/2217]	Loss 1.8943 (1.8837)	mseValence 0.0603 (0.0578)	mseArousal 0.0688 (0.0604)
+[2024-04-10 10:43:49] __main__ INFO: Epoch: [59][1800/2217]	Loss 1.7230 (1.8663)	mseValence 0.0521 (0.0574)	mseArousal 0.0600 (0.0598)
+[2024-04-10 10:44:35] __main__ INFO: Epoch: [59][2000/2217]	Loss 1.5495 (1.8509)	mseValence 0.0477 (0.0570)	mseArousal 0.0463 (0.0593)
+[2024-04-10 10:45:21] __main__ INFO: Epoch: [59][2200/2217]	Loss 1.6903 (1.8348)	mseValence 0.0487 (0.0567)	mseArousal 0.0560 (0.0586)
+[2024-04-10 10:45:26] __main__ INFO: Test: [ 0/24]	Loss 0.6256 (0.6256)	Accuracy 79.688 (79.688)
+[2024-04-10 10:45:30] __main__ INFO:  **** Accuracy 82.855 *** 
+[2024-04-10 10:45:30] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:45:31] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:45:34] __main__ INFO: Epoch: [60][ 0/96]	Loss 1.0203 (1.0203)	Accuracy 79.688 (79.688)	mseValence 0.0321 (0.0321)	mseArousal 0.0215 (0.0215)
+[2024-04-10 10:45:44] __main__ INFO: Epoch: [60][40/96]	Loss 0.3377 (0.6289)	Accuracy 96.094 (88.815)	mseValence 0.0157 (0.0239)	mseArousal 0.0074 (0.0148)
+[2024-04-10 10:45:53] __main__ INFO: Epoch: [60][80/96]	Loss 0.3483 (0.5087)	Accuracy 94.531 (91.223)	mseValence 0.0132 (0.0196)	mseArousal 0.0109 (0.0128)
+[2024-04-10 10:45:58] __main__ INFO: Test: [ 0/24]	Loss 0.4145 (0.4145)	Accuracy 89.062 (89.062)
+[2024-04-10 10:46:00] __main__ INFO:  **** Accuracy 91.102 *** 
+[2024-04-10 10:46:01] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:46:01] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:46:02] __main__ INFO: Epoch: [61][ 0/96]	Loss 0.2775 (0.2775)	Accuracy 94.531 (94.531)	mseValence 0.0073 (0.0073)	mseArousal 0.0098 (0.0098)
+[2024-04-10 10:46:11] __main__ INFO: Epoch: [61][40/96]	Loss 0.2354 (0.2507)	Accuracy 96.875 (96.075)	mseValence 0.0110 (0.0111)	mseArousal 0.0070 (0.0073)
+[2024-04-10 10:46:20] __main__ INFO: Epoch: [61][80/96]	Loss 0.2574 (0.2480)	Accuracy 96.094 (96.258)	mseValence 0.0129 (0.0115)	mseArousal 0.0074 (0.0073)
+[2024-04-10 10:46:24] __main__ INFO: Test: [ 0/24]	Loss 0.5779 (0.5779)	Accuracy 85.156 (85.156)
+[2024-04-10 10:46:27] __main__ INFO:  **** Accuracy 91.004 *** 
+[2024-04-10 10:46:27] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:46:28] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:46:29] __main__ INFO: Epoch: [62][ 0/96]	Loss 0.2091 (0.2091)	Accuracy 96.875 (96.875)	mseValence 0.0066 (0.0066)	mseArousal 0.0060 (0.0060)
+[2024-04-10 10:46:38] __main__ INFO: Epoch: [62][40/96]	Loss 0.1768 (0.1997)	Accuracy 98.438 (97.771)	mseValence 0.0096 (0.0098)	mseArousal 0.0078 (0.0068)
+[2024-04-10 10:46:47] __main__ INFO: Epoch: [62][80/96]	Loss 0.1897 (0.2053)	Accuracy 95.312 (97.492)	mseValence 0.0086 (0.0100)	mseArousal 0.0067 (0.0065)
+[2024-04-10 10:46:51] __main__ INFO: Test: [ 0/24]	Loss 0.5949 (0.5949)	Accuracy 87.500 (87.500)
+[2024-04-10 10:46:54] __main__ INFO:  **** Accuracy 91.558 *** 
+[2024-04-10 10:46:54] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:46:54] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:46:55] __main__ INFO: Epoch: [63][ 0/96]	Loss 0.2442 (0.2442)	Accuracy 97.656 (97.656)	mseValence 0.0121 (0.0121)	mseArousal 0.0077 (0.0077)
+[2024-04-10 10:47:04] __main__ INFO: Epoch: [63][40/96]	Loss 0.1792 (0.1687)	Accuracy 96.875 (98.171)	mseValence 0.0090 (0.0093)	mseArousal 0.0060 (0.0057)
+[2024-04-10 10:47:13] __main__ INFO: Epoch: [63][80/96]	Loss 0.1718 (0.1704)	Accuracy 99.219 (98.061)	mseValence 0.0098 (0.0090)	mseArousal 0.0074 (0.0059)
+[2024-04-10 10:47:18] __main__ INFO: Test: [ 0/24]	Loss 0.5688 (0.5688)	Accuracy 86.719 (86.719)
+[2024-04-10 10:47:20] __main__ INFO:  **** Accuracy 91.428 *** 
+[2024-04-10 10:47:20] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:47:21] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:47:22] __main__ INFO: Epoch: [64][ 0/96]	Loss 0.1143 (0.1143)	Accuracy 99.219 (99.219)	mseValence 0.0078 (0.0078)	mseArousal 0.0035 (0.0035)
+[2024-04-10 10:47:31] __main__ INFO: Epoch: [64][40/96]	Loss 0.1092 (0.1597)	Accuracy 99.219 (98.285)	mseValence 0.0059 (0.0089)	mseArousal 0.0047 (0.0053)
+[2024-04-10 10:47:40] __main__ INFO: Epoch: [64][80/96]	Loss 0.1018 (0.1530)	Accuracy 99.219 (98.438)	mseValence 0.0064 (0.0085)	mseArousal 0.0037 (0.0051)
+[2024-04-10 10:47:44] __main__ INFO: Test: [ 0/24]	Loss 0.5952 (0.5952)	Accuracy 85.938 (85.938)
+[2024-04-10 10:47:47] __main__ INFO:  **** Accuracy 91.591 *** 
+[2024-04-10 10:47:47] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:47:47] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:47:49] __main__ INFO: Epoch: [65][ 0/96]	Loss 0.1500 (0.1500)	Accuracy 98.438 (98.438)	mseValence 0.0100 (0.0100)	mseArousal 0.0041 (0.0041)
+[2024-04-10 10:47:58] __main__ INFO: Epoch: [65][40/96]	Loss 0.1747 (0.1474)	Accuracy 98.438 (98.514)	mseValence 0.0055 (0.0079)	mseArousal 0.0047 (0.0052)
+[2024-04-10 10:48:07] __main__ INFO: Epoch: [65][80/96]	Loss 0.1039 (0.1416)	Accuracy 97.656 (98.582)	mseValence 0.0054 (0.0078)	mseArousal 0.0034 (0.0051)
+[2024-04-10 10:48:11] __main__ INFO: Test: [ 0/24]	Loss 0.7781 (0.7781)	Accuracy 84.375 (84.375)
+[2024-04-10 10:48:14] __main__ INFO:  **** Accuracy 90.971 *** 
+[2024-04-10 10:48:14] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:48:14] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:48:15] __main__ INFO: Epoch: [66][ 0/96]	Loss 0.0938 (0.0938)	Accuracy 100.000 (100.000)	mseValence 0.0065 (0.0065)	mseArousal 0.0038 (0.0038)
+[2024-04-10 10:48:24] __main__ INFO: Epoch: [66][40/96]	Loss 0.0852 (0.1227)	Accuracy 100.000 (98.838)	mseValence 0.0051 (0.0071)	mseArousal 0.0041 (0.0045)
+[2024-04-10 10:48:34] __main__ INFO: Epoch: [66][80/96]	Loss 0.1194 (0.1283)	Accuracy 96.875 (98.650)	mseValence 0.0062 (0.0073)	mseArousal 0.0033 (0.0044)
+[2024-04-10 10:48:38] __main__ INFO: Test: [ 0/24]	Loss 0.6041 (0.6041)	Accuracy 88.281 (88.281)
+[2024-04-10 10:48:41] __main__ INFO:  **** Accuracy 91.656 *** 
+[2024-04-10 10:48:41] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:48:41] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:48:42] __main__ INFO: Epoch: [67][ 0/96]	Loss 0.1805 (0.1805)	Accuracy 96.094 (96.094)	mseValence 0.0064 (0.0064)	mseArousal 0.0047 (0.0047)
+[2024-04-10 10:48:51] __main__ INFO: Epoch: [67][40/96]	Loss 0.0825 (0.1308)	Accuracy 99.219 (98.476)	mseValence 0.0048 (0.0066)	mseArousal 0.0035 (0.0047)
+[2024-04-10 10:49:00] __main__ INFO: Epoch: [67][80/96]	Loss 0.1341 (0.1317)	Accuracy 98.438 (98.524)	mseValence 0.0063 (0.0070)	mseArousal 0.0059 (0.0046)
+[2024-04-10 10:49:05] __main__ INFO: Test: [ 0/24]	Loss 0.6125 (0.6125)	Accuracy 86.719 (86.719)
+[2024-04-10 10:49:07] __main__ INFO:  **** Accuracy 91.949 *** 
+[2024-04-10 10:49:07] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:49:08] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:49:09] __main__ INFO: Epoch: [68][ 0/96]	Loss 0.1007 (0.1007)	Accuracy 100.000 (100.000)	mseValence 0.0074 (0.0074)	mseArousal 0.0036 (0.0036)
+[2024-04-10 10:49:18] __main__ INFO: Epoch: [68][40/96]	Loss 0.0760 (0.1099)	Accuracy 99.219 (98.895)	mseValence 0.0044 (0.0061)	mseArousal 0.0034 (0.0041)
+[2024-04-10 10:49:27] __main__ INFO: Epoch: [68][80/96]	Loss 0.1051 (0.1161)	Accuracy 98.438 (98.717)	mseValence 0.0050 (0.0064)	mseArousal 0.0029 (0.0043)
+[2024-04-10 10:49:31] __main__ INFO: Test: [ 0/24]	Loss 0.6156 (0.6156)	Accuracy 87.500 (87.500)
+[2024-04-10 10:49:34] __main__ INFO:  **** Accuracy 91.004 *** 
+[2024-04-10 10:49:34] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:49:35] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:49:36] __main__ INFO: Epoch: [69][ 0/96]	Loss 0.1077 (0.1077)	Accuracy 97.656 (97.656)	mseValence 0.0052 (0.0052)	mseArousal 0.0034 (0.0034)
+[2024-04-10 10:49:45] __main__ INFO: Epoch: [69][40/96]	Loss 0.1157 (0.1127)	Accuracy 99.219 (98.933)	mseValence 0.0072 (0.0065)	mseArousal 0.0040 (0.0040)
+[2024-04-10 10:49:54] __main__ INFO: Epoch: [69][80/96]	Loss 0.0687 (0.1158)	Accuracy 100.000 (98.920)	mseValence 0.0051 (0.0065)	mseArousal 0.0024 (0.0041)
+[2024-04-10 10:50:01] __main__ INFO: Epoch: [69][   0/2217]	Loss 2.9624 (2.9624)	mseValence 0.0737 (0.0737)	mseArousal 0.0577 (0.0577)
+[2024-04-10 10:51:12] __main__ INFO: Epoch: [69][ 200/2217]	Loss 1.7657 (1.8357)	mseValence 0.0571 (0.0568)	mseArousal 0.0602 (0.0577)
+[2024-04-10 10:52:00] __main__ INFO: Epoch: [69][ 400/2217]	Loss 1.6682 (1.7767)	mseValence 0.0539 (0.0555)	mseArousal 0.0505 (0.0563)
+[2024-04-10 10:52:46] __main__ INFO: Epoch: [69][ 600/2217]	Loss 1.4754 (1.7494)	mseValence 0.0519 (0.0548)	mseArousal 0.0407 (0.0558)
+[2024-04-10 10:53:32] __main__ INFO: Epoch: [69][ 800/2217]	Loss 1.7625 (1.7238)	mseValence 0.0551 (0.0543)	mseArousal 0.0634 (0.0553)
+[2024-04-10 10:54:18] __main__ INFO: Epoch: [69][1000/2217]	Loss 1.5322 (1.7053)	mseValence 0.0493 (0.0538)	mseArousal 0.0474 (0.0548)
+[2024-04-10 10:55:04] __main__ INFO: Epoch: [69][1200/2217]	Loss 1.7072 (1.6837)	mseValence 0.0611 (0.0533)	mseArousal 0.0584 (0.0543)
+[2024-04-10 10:55:50] __main__ INFO: Epoch: [69][1400/2217]	Loss 1.5426 (1.6633)	mseValence 0.0491 (0.0527)	mseArousal 0.0573 (0.0537)
+[2024-04-10 10:56:36] __main__ INFO: Epoch: [69][1600/2217]	Loss 1.2921 (1.6450)	mseValence 0.0401 (0.0523)	mseArousal 0.0441 (0.0531)
+[2024-04-10 10:57:22] __main__ INFO: Epoch: [69][1800/2217]	Loss 1.6032 (1.6294)	mseValence 0.0567 (0.0520)	mseArousal 0.0626 (0.0526)
+[2024-04-10 10:58:08] __main__ INFO: Epoch: [69][2000/2217]	Loss 1.3417 (1.6124)	mseValence 0.0519 (0.0516)	mseArousal 0.0429 (0.0521)
+[2024-04-10 10:58:54] __main__ INFO: Epoch: [69][2200/2217]	Loss 1.3776 (1.5978)	mseValence 0.0411 (0.0513)	mseArousal 0.0445 (0.0517)
+[2024-04-10 10:58:59] __main__ INFO: Test: [ 0/24]	Loss 0.6038 (0.6038)	Accuracy 78.125 (78.125)
+[2024-04-10 10:59:03] __main__ INFO:  **** Accuracy 85.593 *** 
+[2024-04-10 10:59:03] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:59:04] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:59:06] __main__ INFO: Epoch: [70][ 0/96]	Loss 1.0212 (1.0212)	Accuracy 79.688 (79.688)	mseValence 0.0218 (0.0218)	mseArousal 0.0349 (0.0349)
+[2024-04-10 10:59:16] __main__ INFO: Epoch: [70][40/96]	Loss 0.3016 (0.5318)	Accuracy 96.094 (90.930)	mseValence 0.0145 (0.0192)	mseArousal 0.0073 (0.0138)
+[2024-04-10 10:59:25] __main__ INFO: Epoch: [70][80/96]	Loss 0.2631 (0.4306)	Accuracy 96.875 (92.872)	mseValence 0.0115 (0.0164)	mseArousal 0.0086 (0.0115)
+[2024-04-10 10:59:30] __main__ INFO: Test: [ 0/24]	Loss 0.4444 (0.4444)	Accuracy 89.844 (89.844)
+[2024-04-10 10:59:32] __main__ INFO:  **** Accuracy 91.884 *** 
+[2024-04-10 10:59:32] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:59:33] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 10:59:34] __main__ INFO: Epoch: [71][ 0/96]	Loss 0.2760 (0.2760)	Accuracy 95.312 (95.312)	mseValence 0.0103 (0.0103)	mseArousal 0.0085 (0.0085)
+[2024-04-10 10:59:43] __main__ INFO: Epoch: [71][40/96]	Loss 0.1877 (0.2234)	Accuracy 98.438 (96.970)	mseValence 0.0121 (0.0107)	mseArousal 0.0067 (0.0068)
+[2024-04-10 10:59:52] __main__ INFO: Epoch: [71][80/96]	Loss 0.2279 (0.2142)	Accuracy 96.094 (97.299)	mseValence 0.0101 (0.0110)	mseArousal 0.0058 (0.0067)
+[2024-04-10 10:59:56] __main__ INFO: Test: [ 0/24]	Loss 0.5533 (0.5533)	Accuracy 85.938 (85.938)
+[2024-04-10 10:59:59] __main__ INFO:  **** Accuracy 91.688 *** 
+[2024-04-10 10:59:59] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 10:59:59] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 11:00:00] __main__ INFO: Epoch: [72][ 0/96]	Loss 0.1648 (0.1648)	Accuracy 99.219 (99.219)	mseValence 0.0097 (0.0097)	mseArousal 0.0052 (0.0052)
+[2024-04-10 11:00:09] __main__ INFO: Epoch: [72][40/96]	Loss 0.1076 (0.1663)	Accuracy 100.000 (98.114)	mseValence 0.0080 (0.0088)	mseArousal 0.0050 (0.0058)
+[2024-04-10 11:00:18] __main__ INFO: Epoch: [72][80/96]	Loss 0.1692 (0.1616)	Accuracy 98.438 (98.274)	mseValence 0.0059 (0.0086)	mseArousal 0.0075 (0.0058)
+[2024-04-10 11:00:22] __main__ INFO: Test: [ 0/24]	Loss 0.4632 (0.4632)	Accuracy 89.062 (89.062)
+[2024-04-10 11:00:25] __main__ INFO:  **** Accuracy 91.819 *** 
+[2024-04-10 11:00:25] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:00:26] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 11:00:27] __main__ INFO: Epoch: [73][ 0/96]	Loss 0.1568 (0.1568)	Accuracy 99.219 (99.219)	mseValence 0.0086 (0.0086)	mseArousal 0.0063 (0.0063)
+[2024-04-10 11:00:36] __main__ INFO: Epoch: [73][40/96]	Loss 0.1327 (0.1487)	Accuracy 99.219 (98.438)	mseValence 0.0100 (0.0083)	mseArousal 0.0049 (0.0052)
+[2024-04-10 11:00:45] __main__ INFO: Epoch: [73][80/96]	Loss 0.0995 (0.1487)	Accuracy 99.219 (98.370)	mseValence 0.0059 (0.0080)	mseArousal 0.0047 (0.0052)
+[2024-04-10 11:00:49] __main__ INFO: Test: [ 0/24]	Loss 0.5863 (0.5863)	Accuracy 85.156 (85.156)
+[2024-04-10 11:00:52] __main__ INFO:  **** Accuracy 91.362 *** 
+[2024-04-10 11:00:52] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:00:52] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 11:00:53] __main__ INFO: Epoch: [74][ 0/96]	Loss 0.1742 (0.1742)	Accuracy 98.438 (98.438)	mseValence 0.0086 (0.0086)	mseArousal 0.0053 (0.0053)
+[2024-04-10 11:01:02] __main__ INFO: Epoch: [74][40/96]	Loss 0.1266 (0.1300)	Accuracy 97.656 (98.552)	mseValence 0.0068 (0.0074)	mseArousal 0.0031 (0.0045)
+[2024-04-10 11:01:11] __main__ INFO: Epoch: [74][80/96]	Loss 0.1330 (0.1350)	Accuracy 97.656 (98.515)	mseValence 0.0057 (0.0074)	mseArousal 0.0054 (0.0047)
+[2024-04-10 11:01:16] __main__ INFO: Test: [ 0/24]	Loss 0.6599 (0.6599)	Accuracy 85.156 (85.156)
+[2024-04-10 11:01:19] __main__ INFO:  **** Accuracy 91.199 *** 
+[2024-04-10 11:01:19] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:01:19] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 11:01:20] __main__ INFO: Epoch: [75][ 0/96]	Loss 0.0976 (0.0976)	Accuracy 99.219 (99.219)	mseValence 0.0054 (0.0054)	mseArousal 0.0041 (0.0041)
+[2024-04-10 11:01:29] __main__ INFO: Epoch: [75][40/96]	Loss 0.1248 (0.1156)	Accuracy 98.438 (98.819)	mseValence 0.0070 (0.0063)	mseArousal 0.0054 (0.0043)
+[2024-04-10 11:01:38] __main__ INFO: Epoch: [75][80/96]	Loss 0.1064 (0.1184)	Accuracy 99.219 (98.785)	mseValence 0.0073 (0.0065)	mseArousal 0.0036 (0.0042)
+[2024-04-10 11:01:42] __main__ INFO: Test: [ 0/24]	Loss 0.5802 (0.5802)	Accuracy 86.719 (86.719)
+[2024-04-10 11:01:45] __main__ INFO:  **** Accuracy 91.362 *** 
+[2024-04-10 11:01:45] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:01:46] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 11:01:47] __main__ INFO: Epoch: [76][ 0/96]	Loss 0.0739 (0.0739)	Accuracy 100.000 (100.000)	mseValence 0.0047 (0.0047)	mseArousal 0.0035 (0.0035)
+[2024-04-10 11:01:56] __main__ INFO: Epoch: [76][40/96]	Loss 0.0852 (0.1206)	Accuracy 100.000 (98.990)	mseValence 0.0065 (0.0065)	mseArousal 0.0038 (0.0045)
+[2024-04-10 11:02:05] __main__ INFO: Epoch: [76][80/96]	Loss 0.1279 (0.1168)	Accuracy 98.438 (99.035)	mseValence 0.0064 (0.0065)	mseArousal 0.0041 (0.0044)
+[2024-04-10 11:02:09] __main__ INFO: Test: [ 0/24]	Loss 0.5643 (0.5643)	Accuracy 89.062 (89.062)
+[2024-04-10 11:02:12] __main__ INFO:  **** Accuracy 92.177 *** 
+[2024-04-10 11:02:12] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:02:13] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 11:02:14] __main__ INFO: Epoch: [77][ 0/96]	Loss 0.1366 (0.1366)	Accuracy 99.219 (99.219)	mseValence 0.0089 (0.0089)	mseArousal 0.0050 (0.0050)
+[2024-04-10 11:02:23] __main__ INFO: Epoch: [77][40/96]	Loss 0.1199 (0.1111)	Accuracy 98.438 (98.952)	mseValence 0.0079 (0.0065)	mseArousal 0.0036 (0.0040)
+[2024-04-10 11:02:32] __main__ INFO: Epoch: [77][80/96]	Loss 0.0934 (0.1080)	Accuracy 99.219 (98.997)	mseValence 0.0068 (0.0063)	mseArousal 0.0038 (0.0040)
+[2024-04-10 11:02:36] __main__ INFO: Test: [ 0/24]	Loss 0.6004 (0.6004)	Accuracy 87.500 (87.500)
+[2024-04-10 11:02:39] __main__ INFO:  **** Accuracy 91.917 *** 
+[2024-04-10 11:02:39] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:02:39] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 11:02:40] __main__ INFO: Epoch: [78][ 0/96]	Loss 0.1385 (0.1385)	Accuracy 97.656 (97.656)	mseValence 0.0083 (0.0083)	mseArousal 0.0029 (0.0029)
+[2024-04-10 11:02:49] __main__ INFO: Epoch: [78][40/96]	Loss 0.1319 (0.1042)	Accuracy 98.438 (98.933)	mseValence 0.0047 (0.0058)	mseArousal 0.0066 (0.0037)
+[2024-04-10 11:02:58] __main__ INFO: Epoch: [78][80/96]	Loss 0.0695 (0.1017)	Accuracy 99.219 (99.016)	mseValence 0.0047 (0.0059)	mseArousal 0.0032 (0.0037)
+[2024-04-10 11:03:03] __main__ INFO: Test: [ 0/24]	Loss 0.7521 (0.7521)	Accuracy 85.156 (85.156)
+[2024-04-10 11:03:05] __main__ INFO:  **** Accuracy 91.558 *** 
+[2024-04-10 11:03:05] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:03:06] __main__ INFO: Current learning rate: 0.0005
+[2024-04-10 11:03:07] __main__ INFO: Epoch: [79][ 0/96]	Loss 0.0701 (0.0701)	Accuracy 100.000 (100.000)	mseValence 0.0055 (0.0055)	mseArousal 0.0033 (0.0033)
+[2024-04-10 11:03:16] __main__ INFO: Epoch: [79][40/96]	Loss 0.0877 (0.1013)	Accuracy 100.000 (98.990)	mseValence 0.0063 (0.0055)	mseArousal 0.0035 (0.0037)
+[2024-04-10 11:03:25] __main__ INFO: Epoch: [79][80/96]	Loss 0.1221 (0.1004)	Accuracy 99.219 (99.026)	mseValence 0.0071 (0.0056)	mseArousal 0.0043 (0.0036)
+[2024-04-10 11:03:35] __main__ INFO: Epoch: [79][   0/2217]	Loss 3.1396 (3.1396)	mseValence 0.0857 (0.0857)	mseArousal 0.0578 (0.0578)
+[2024-04-10 11:04:59] __main__ INFO: Epoch: [79][ 200/2217]	Loss 1.3334 (1.6007)	mseValence 0.0502 (0.0522)	mseArousal 0.0350 (0.0503)
+[2024-04-10 11:05:50] __main__ INFO: Epoch: [79][ 400/2217]	Loss 1.5308 (1.5433)	mseValence 0.0454 (0.0508)	mseArousal 0.0487 (0.0491)
+[2024-04-10 11:06:35] __main__ INFO: Epoch: [79][ 600/2217]	Loss 1.3643 (1.5139)	mseValence 0.0488 (0.0497)	mseArousal 0.0451 (0.0486)
+[2024-04-10 11:07:21] __main__ INFO: Epoch: [79][ 800/2217]	Loss 1.2939 (1.4925)	mseValence 0.0497 (0.0491)	mseArousal 0.0377 (0.0482)
+[2024-04-10 11:08:07] __main__ INFO: Epoch: [79][1000/2217]	Loss 1.1698 (1.4780)	mseValence 0.0375 (0.0490)	mseArousal 0.0346 (0.0478)
+[2024-04-10 11:08:53] __main__ INFO: Epoch: [79][1200/2217]	Loss 1.3400 (1.4613)	mseValence 0.0417 (0.0486)	mseArousal 0.0457 (0.0474)
+[2024-04-10 11:09:39] __main__ INFO: Epoch: [79][1400/2217]	Loss 1.2639 (1.4468)	mseValence 0.0395 (0.0483)	mseArousal 0.0494 (0.0471)
+[2024-04-10 11:10:25] __main__ INFO: Epoch: [79][1600/2217]	Loss 1.2002 (1.4308)	mseValence 0.0403 (0.0479)	mseArousal 0.0449 (0.0466)
+[2024-04-10 11:11:11] __main__ INFO: Epoch: [79][1800/2217]	Loss 1.4507 (1.4167)	mseValence 0.0600 (0.0476)	mseArousal 0.0479 (0.0462)
+[2024-04-10 11:11:57] __main__ INFO: Epoch: [79][2000/2217]	Loss 1.4868 (1.4037)	mseValence 0.0444 (0.0473)	mseArousal 0.0608 (0.0458)
+[2024-04-10 11:12:43] __main__ INFO: Epoch: [79][2200/2217]	Loss 1.0533 (1.3905)	mseValence 0.0375 (0.0469)	mseArousal 0.0366 (0.0455)
+[2024-04-10 11:12:49] __main__ INFO: Test: [ 0/24]	Loss 0.6873 (0.6873)	Accuracy 80.469 (80.469)
+[2024-04-10 11:12:52] __main__ INFO:  **** Accuracy 84.681 *** 
+[2024-04-10 11:12:52] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:12:52] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:12:55] __main__ INFO: Epoch: [80][ 0/96]	Loss 1.2778 (1.2778)	Accuracy 72.656 (72.656)	mseValence 0.0368 (0.0368)	mseArousal 0.0277 (0.0277)
+[2024-04-10 11:13:04] __main__ INFO: Epoch: [80][40/96]	Loss 0.4119 (0.5770)	Accuracy 94.531 (89.996)	mseValence 0.0187 (0.0201)	mseArousal 0.0104 (0.0147)
+[2024-04-10 11:13:13] __main__ INFO: Epoch: [80][80/96]	Loss 0.3009 (0.4592)	Accuracy 95.312 (92.419)	mseValence 0.0124 (0.0172)	mseArousal 0.0086 (0.0120)
+[2024-04-10 11:13:18] __main__ INFO: Test: [ 0/24]	Loss 0.5686 (0.5686)	Accuracy 85.156 (85.156)
+[2024-04-10 11:13:20] __main__ INFO:  **** Accuracy 90.124 *** 
+[2024-04-10 11:13:20] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:13:21] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:13:22] __main__ INFO: Epoch: [81][ 0/96]	Loss 0.1749 (0.1749)	Accuracy 98.438 (98.438)	mseValence 0.0108 (0.0108)	mseArousal 0.0055 (0.0055)
+[2024-04-10 11:13:31] __main__ INFO: Epoch: [81][40/96]	Loss 0.3074 (0.2412)	Accuracy 96.094 (96.932)	mseValence 0.0116 (0.0111)	mseArousal 0.0065 (0.0073)
+[2024-04-10 11:13:40] __main__ INFO: Epoch: [81][80/96]	Loss 0.1878 (0.2244)	Accuracy 99.219 (97.155)	mseValence 0.0095 (0.0104)	mseArousal 0.0064 (0.0070)
+[2024-04-10 11:13:44] __main__ INFO: Test: [ 0/24]	Loss 0.6038 (0.6038)	Accuracy 87.500 (87.500)
+[2024-04-10 11:13:47] __main__ INFO:  **** Accuracy 90.971 *** 
+[2024-04-10 11:13:47] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:13:47] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:13:48] __main__ INFO: Epoch: [82][ 0/96]	Loss 0.1292 (0.1292)	Accuracy 99.219 (99.219)	mseValence 0.0075 (0.0075)	mseArousal 0.0055 (0.0055)
+[2024-04-10 11:13:57] __main__ INFO: Epoch: [82][40/96]	Loss 0.1725 (0.1822)	Accuracy 97.656 (97.847)	mseValence 0.0083 (0.0088)	mseArousal 0.0037 (0.0064)
+[2024-04-10 11:14:06] __main__ INFO: Epoch: [82][80/96]	Loss 0.1845 (0.1762)	Accuracy 97.656 (97.965)	mseValence 0.0073 (0.0088)	mseArousal 0.0051 (0.0062)
+[2024-04-10 11:14:10] __main__ INFO: Test: [ 0/24]	Loss 0.6248 (0.6248)	Accuracy 87.500 (87.500)
+[2024-04-10 11:14:13] __main__ INFO:  **** Accuracy 90.482 *** 
+[2024-04-10 11:14:13] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:14:14] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:14:15] __main__ INFO: Epoch: [83][ 0/96]	Loss 0.1630 (0.1630)	Accuracy 96.875 (96.875)	mseValence 0.0086 (0.0086)	mseArousal 0.0047 (0.0047)
+[2024-04-10 11:14:23] __main__ INFO: Epoch: [83][40/96]	Loss 0.1375 (0.1482)	Accuracy 98.438 (98.399)	mseValence 0.0090 (0.0082)	mseArousal 0.0050 (0.0054)
+[2024-04-10 11:14:32] __main__ INFO: Epoch: [83][80/96]	Loss 0.1402 (0.1533)	Accuracy 98.438 (98.351)	mseValence 0.0068 (0.0083)	mseArousal 0.0047 (0.0055)
+[2024-04-10 11:14:37] __main__ INFO: Test: [ 0/24]	Loss 0.6170 (0.6170)	Accuracy 87.500 (87.500)
+[2024-04-10 11:14:39] __main__ INFO:  **** Accuracy 91.037 *** 
+[2024-04-10 11:14:39] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:14:40] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:14:41] __main__ INFO: Epoch: [84][ 0/96]	Loss 0.1039 (0.1039)	Accuracy 100.000 (100.000)	mseValence 0.0071 (0.0071)	mseArousal 0.0039 (0.0039)
+[2024-04-10 11:14:50] __main__ INFO: Epoch: [84][40/96]	Loss 0.1404 (0.1361)	Accuracy 99.219 (98.761)	mseValence 0.0079 (0.0075)	mseArousal 0.0060 (0.0048)
+[2024-04-10 11:14:59] __main__ INFO: Epoch: [84][80/96]	Loss 0.1576 (0.1375)	Accuracy 97.656 (98.688)	mseValence 0.0103 (0.0073)	mseArousal 0.0047 (0.0049)
+[2024-04-10 11:15:03] __main__ INFO: Test: [ 0/24]	Loss 0.6697 (0.6697)	Accuracy 88.281 (88.281)
+[2024-04-10 11:15:06] __main__ INFO:  **** Accuracy 90.776 *** 
+[2024-04-10 11:15:06] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:15:06] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:15:07] __main__ INFO: Epoch: [85][ 0/96]	Loss 0.0972 (0.0972)	Accuracy 99.219 (99.219)	mseValence 0.0051 (0.0051)	mseArousal 0.0046 (0.0046)
+[2024-04-10 11:15:16] __main__ INFO: Epoch: [85][40/96]	Loss 0.1005 (0.1233)	Accuracy 99.219 (98.666)	mseValence 0.0069 (0.0068)	mseArousal 0.0029 (0.0046)
+[2024-04-10 11:15:25] __main__ INFO: Epoch: [85][80/96]	Loss 0.1470 (0.1205)	Accuracy 98.438 (98.775)	mseValence 0.0082 (0.0067)	mseArousal 0.0054 (0.0045)
+[2024-04-10 11:15:29] __main__ INFO: Test: [ 0/24]	Loss 0.6693 (0.6693)	Accuracy 88.281 (88.281)
+[2024-04-10 11:15:32] __main__ INFO:  **** Accuracy 91.069 *** 
+[2024-04-10 11:15:32] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:15:33] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:15:34] __main__ INFO: Epoch: [86][ 0/96]	Loss 0.1235 (0.1235)	Accuracy 99.219 (99.219)	mseValence 0.0068 (0.0068)	mseArousal 0.0041 (0.0041)
+[2024-04-10 11:15:42] __main__ INFO: Epoch: [86][40/96]	Loss 0.1190 (0.1088)	Accuracy 99.219 (98.895)	mseValence 0.0075 (0.0061)	mseArousal 0.0052 (0.0041)
+[2024-04-10 11:15:51] __main__ INFO: Epoch: [86][80/96]	Loss 0.1107 (0.1087)	Accuracy 98.438 (98.958)	mseValence 0.0072 (0.0061)	mseArousal 0.0033 (0.0042)
+[2024-04-10 11:15:56] __main__ INFO: Test: [ 0/24]	Loss 0.6513 (0.6513)	Accuracy 89.062 (89.062)
+[2024-04-10 11:15:58] __main__ INFO:  **** Accuracy 91.167 *** 
+[2024-04-10 11:15:58] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:15:59] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:16:00] __main__ INFO: Epoch: [87][ 0/96]	Loss 0.1366 (0.1366)	Accuracy 98.438 (98.438)	mseValence 0.0051 (0.0051)	mseArousal 0.0057 (0.0057)
+[2024-04-10 11:16:09] __main__ INFO: Epoch: [87][40/96]	Loss 0.1163 (0.1151)	Accuracy 98.438 (98.800)	mseValence 0.0064 (0.0066)	mseArousal 0.0033 (0.0042)
+[2024-04-10 11:16:18] __main__ INFO: Epoch: [87][80/96]	Loss 0.1193 (0.1171)	Accuracy 97.656 (98.727)	mseValence 0.0048 (0.0064)	mseArousal 0.0024 (0.0041)
+[2024-04-10 11:16:22] __main__ INFO: Test: [ 0/24]	Loss 0.6579 (0.6579)	Accuracy 87.500 (87.500)
+[2024-04-10 11:16:25] __main__ INFO:  **** Accuracy 90.841 *** 
+[2024-04-10 11:16:25] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:16:25] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:16:26] __main__ INFO: Epoch: [88][ 0/96]	Loss 0.1127 (0.1127)	Accuracy 100.000 (100.000)	mseValence 0.0076 (0.0076)	mseArousal 0.0047 (0.0047)
+[2024-04-10 11:16:35] __main__ INFO: Epoch: [88][40/96]	Loss 0.0789 (0.1077)	Accuracy 99.219 (98.895)	mseValence 0.0048 (0.0059)	mseArousal 0.0038 (0.0039)
+[2024-04-10 11:16:44] __main__ INFO: Epoch: [88][80/96]	Loss 0.0982 (0.1065)	Accuracy 99.219 (98.891)	mseValence 0.0066 (0.0059)	mseArousal 0.0042 (0.0040)
+[2024-04-10 11:16:48] __main__ INFO: Test: [ 0/24]	Loss 0.6599 (0.6599)	Accuracy 89.062 (89.062)
+[2024-04-10 11:16:51] __main__ INFO:  **** Accuracy 90.808 *** 
+[2024-04-10 11:16:51] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:16:52] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:16:53] __main__ INFO: Epoch: [89][ 0/96]	Loss 0.0828 (0.0828)	Accuracy 99.219 (99.219)	mseValence 0.0038 (0.0038)	mseArousal 0.0042 (0.0042)
+[2024-04-10 11:17:02] __main__ INFO: Epoch: [89][40/96]	Loss 0.0996 (0.1026)	Accuracy 98.438 (99.085)	mseValence 0.0060 (0.0055)	mseArousal 0.0033 (0.0039)
+[2024-04-10 11:17:11] __main__ INFO: Epoch: [89][80/96]	Loss 0.0810 (0.1032)	Accuracy 100.000 (99.084)	mseValence 0.0055 (0.0056)	mseArousal 0.0047 (0.0039)
+[2024-04-10 11:17:19] __main__ INFO: Epoch: [89][   0/2217]	Loss 1.9677 (1.9677)	mseValence 0.0674 (0.0674)	mseArousal 0.0485 (0.0485)
+[2024-04-10 11:18:21] __main__ INFO: Epoch: [89][ 200/2217]	Loss 1.1802 (1.3144)	mseValence 0.0477 (0.0451)	mseArousal 0.0422 (0.0425)
+[2024-04-10 11:19:07] __main__ INFO: Epoch: [89][ 400/2217]	Loss 1.2361 (1.2263)	mseValence 0.0399 (0.0423)	mseArousal 0.0415 (0.0405)
+[2024-04-10 11:19:53] __main__ INFO: Epoch: [89][ 600/2217]	Loss 1.3422 (1.1896)	mseValence 0.0349 (0.0418)	mseArousal 0.0642 (0.0393)
+[2024-04-10 11:20:39] __main__ INFO: Epoch: [89][ 800/2217]	Loss 0.9187 (1.1650)	mseValence 0.0307 (0.0412)	mseArousal 0.0293 (0.0388)
+[2024-04-10 11:21:25] __main__ INFO: Epoch: [89][1000/2217]	Loss 0.8486 (1.1434)	mseValence 0.0358 (0.0407)	mseArousal 0.0315 (0.0381)
+[2024-04-10 11:22:11] __main__ INFO: Epoch: [89][1200/2217]	Loss 1.0177 (1.1268)	mseValence 0.0390 (0.0404)	mseArousal 0.0312 (0.0375)
+[2024-04-10 11:22:57] __main__ INFO: Epoch: [89][1400/2217]	Loss 1.1945 (1.1125)	mseValence 0.0420 (0.0400)	mseArousal 0.0422 (0.0371)
+[2024-04-10 11:23:43] __main__ INFO: Epoch: [89][1600/2217]	Loss 0.7393 (1.0979)	mseValence 0.0237 (0.0397)	mseArousal 0.0271 (0.0367)
+[2024-04-10 11:24:30] __main__ INFO: Epoch: [89][1800/2217]	Loss 0.8572 (1.0847)	mseValence 0.0289 (0.0394)	mseArousal 0.0367 (0.0362)
+[2024-04-10 11:25:16] __main__ INFO: Epoch: [89][2000/2217]	Loss 0.9927 (1.0740)	mseValence 0.0504 (0.0392)	mseArousal 0.0273 (0.0360)
+[2024-04-10 11:26:02] __main__ INFO: Epoch: [89][2200/2217]	Loss 0.9424 (1.0645)	mseValence 0.0355 (0.0389)	mseArousal 0.0308 (0.0357)
+[2024-04-10 11:26:08] __main__ INFO: Test: [ 0/24]	Loss 0.6438 (0.6438)	Accuracy 81.250 (81.250)
+[2024-04-10 11:26:11] __main__ INFO:  **** Accuracy 85.137 *** 
+[2024-04-10 11:26:11] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:26:12] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:26:14] __main__ INFO: Epoch: [90][ 0/96]	Loss 0.6539 (0.6539)	Accuracy 89.062 (89.062)	mseValence 0.0220 (0.0220)	mseArousal 0.0198 (0.0198)
+[2024-04-10 11:26:25] __main__ INFO: Epoch: [90][40/96]	Loss 0.2254 (0.3604)	Accuracy 97.656 (94.931)	mseValence 0.0109 (0.0150)	mseArousal 0.0083 (0.0111)
+[2024-04-10 11:26:34] __main__ INFO: Epoch: [90][80/96]	Loss 0.1981 (0.2937)	Accuracy 96.875 (96.103)	mseValence 0.0092 (0.0130)	mseArousal 0.0062 (0.0092)
+[2024-04-10 11:26:38] __main__ INFO: Test: [ 0/24]	Loss 0.5472 (0.5472)	Accuracy 88.281 (88.281)
+[2024-04-10 11:26:41] __main__ INFO:  **** Accuracy 90.352 *** 
+[2024-04-10 11:26:41] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:26:41] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:26:42] __main__ INFO: Epoch: [91][ 0/96]	Loss 0.1526 (0.1526)	Accuracy 98.438 (98.438)	mseValence 0.0087 (0.0087)	mseArousal 0.0051 (0.0051)
+[2024-04-10 11:26:51] __main__ INFO: Epoch: [91][40/96]	Loss 0.1363 (0.1628)	Accuracy 99.219 (98.438)	mseValence 0.0068 (0.0084)	mseArousal 0.0049 (0.0057)
+[2024-04-10 11:27:00] __main__ INFO: Epoch: [91][80/96]	Loss 0.0977 (0.1548)	Accuracy 100.000 (98.524)	mseValence 0.0067 (0.0081)	mseArousal 0.0040 (0.0056)
+[2024-04-10 11:27:04] __main__ INFO: Test: [ 0/24]	Loss 0.6087 (0.6087)	Accuracy 82.031 (82.031)
+[2024-04-10 11:27:07] __main__ INFO:  **** Accuracy 90.059 *** 
+[2024-04-10 11:27:07] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:27:07] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:27:09] __main__ INFO: Epoch: [92][ 0/96]	Loss 0.1069 (0.1069)	Accuracy 100.000 (100.000)	mseValence 0.0077 (0.0077)	mseArousal 0.0040 (0.0040)
+[2024-04-10 11:27:17] __main__ INFO: Epoch: [92][40/96]	Loss 0.1403 (0.1264)	Accuracy 98.438 (98.971)	mseValence 0.0072 (0.0072)	mseArousal 0.0036 (0.0048)
+[2024-04-10 11:27:26] __main__ INFO: Epoch: [92][80/96]	Loss 0.1038 (0.1247)	Accuracy 99.219 (98.900)	mseValence 0.0060 (0.0070)	mseArousal 0.0046 (0.0047)
+[2024-04-10 11:27:31] __main__ INFO: Test: [ 0/24]	Loss 0.6652 (0.6652)	Accuracy 85.156 (85.156)
+[2024-04-10 11:27:33] __main__ INFO:  **** Accuracy 90.124 *** 
+[2024-04-10 11:27:33] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:27:34] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:27:35] __main__ INFO: Epoch: [93][ 0/96]	Loss 0.1081 (0.1081)	Accuracy 100.000 (100.000)	mseValence 0.0056 (0.0056)	mseArousal 0.0056 (0.0056)
+[2024-04-10 11:27:44] __main__ INFO: Epoch: [93][40/96]	Loss 0.1661 (0.1131)	Accuracy 98.438 (98.990)	mseValence 0.0135 (0.0064)	mseArousal 0.0053 (0.0043)
+[2024-04-10 11:27:53] __main__ INFO: Epoch: [93][80/96]	Loss 0.1226 (0.1105)	Accuracy 99.219 (99.045)	mseValence 0.0071 (0.0064)	mseArousal 0.0034 (0.0042)
+[2024-04-10 11:27:57] __main__ INFO: Test: [ 0/24]	Loss 0.6092 (0.6092)	Accuracy 89.062 (89.062)
+[2024-04-10 11:28:00] __main__ INFO:  **** Accuracy 90.906 *** 
+[2024-04-10 11:28:00] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:28:01] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:28:02] __main__ INFO: Epoch: [94][ 0/96]	Loss 0.1030 (0.1030)	Accuracy 98.438 (98.438)	mseValence 0.0039 (0.0039)	mseArousal 0.0053 (0.0053)
+[2024-04-10 11:28:11] __main__ INFO: Epoch: [94][40/96]	Loss 0.0852 (0.1024)	Accuracy 100.000 (99.181)	mseValence 0.0048 (0.0060)	mseArousal 0.0047 (0.0040)
+[2024-04-10 11:28:20] __main__ INFO: Epoch: [94][80/96]	Loss 0.0792 (0.1045)	Accuracy 99.219 (99.084)	mseValence 0.0042 (0.0060)	mseArousal 0.0034 (0.0039)
+[2024-04-10 11:28:24] __main__ INFO: Test: [ 0/24]	Loss 0.6109 (0.6109)	Accuracy 88.281 (88.281)
+[2024-04-10 11:28:27] __main__ INFO:  **** Accuracy 91.037 *** 
+[2024-04-10 11:28:27] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:28:27] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:28:28] __main__ INFO: Epoch: [95][ 0/96]	Loss 0.1125 (0.1125)	Accuracy 98.438 (98.438)	mseValence 0.0052 (0.0052)	mseArousal 0.0034 (0.0034)
+[2024-04-10 11:28:37] __main__ INFO: Epoch: [95][40/96]	Loss 0.1352 (0.0994)	Accuracy 98.438 (99.143)	mseValence 0.0078 (0.0056)	mseArousal 0.0039 (0.0037)
+[2024-04-10 11:28:46] __main__ INFO: Epoch: [95][80/96]	Loss 0.0867 (0.0970)	Accuracy 100.000 (99.171)	mseValence 0.0064 (0.0054)	mseArousal 0.0036 (0.0038)
+[2024-04-10 11:28:50] __main__ INFO: Test: [ 0/24]	Loss 0.6751 (0.6751)	Accuracy 85.938 (85.938)
+[2024-04-10 11:28:53] __main__ INFO:  **** Accuracy 90.645 *** 
+[2024-04-10 11:28:53] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:28:54] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:28:55] __main__ INFO: Epoch: [96][ 0/96]	Loss 0.0785 (0.0785)	Accuracy 100.000 (100.000)	mseValence 0.0054 (0.0054)	mseArousal 0.0033 (0.0033)
+[2024-04-10 11:29:04] __main__ INFO: Epoch: [96][40/96]	Loss 0.1374 (0.0907)	Accuracy 96.875 (99.276)	mseValence 0.0055 (0.0055)	mseArousal 0.0056 (0.0036)
+[2024-04-10 11:29:13] __main__ INFO: Epoch: [96][80/96]	Loss 0.1503 (0.0945)	Accuracy 97.656 (99.286)	mseValence 0.0081 (0.0056)	mseArousal 0.0041 (0.0037)
+[2024-04-10 11:29:17] __main__ INFO: Test: [ 0/24]	Loss 0.6463 (0.6463)	Accuracy 85.938 (85.938)
+[2024-04-10 11:29:19] __main__ INFO:  **** Accuracy 90.678 *** 
+[2024-04-10 11:29:19] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:29:20] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:29:21] __main__ INFO: Epoch: [97][ 0/96]	Loss 0.0530 (0.0530)	Accuracy 100.000 (100.000)	mseValence 0.0037 (0.0037)	mseArousal 0.0024 (0.0024)
+[2024-04-10 11:29:30] __main__ INFO: Epoch: [97][40/96]	Loss 0.1238 (0.0876)	Accuracy 98.438 (99.123)	mseValence 0.0080 (0.0052)	mseArousal 0.0031 (0.0034)
+[2024-04-10 11:29:39] __main__ INFO: Epoch: [97][80/96]	Loss 0.0849 (0.0872)	Accuracy 99.219 (99.103)	mseValence 0.0051 (0.0051)	mseArousal 0.0038 (0.0033)
+[2024-04-10 11:29:43] __main__ INFO: Test: [ 0/24]	Loss 0.6145 (0.6145)	Accuracy 87.500 (87.500)
+[2024-04-10 11:29:46] __main__ INFO:  **** Accuracy 91.167 *** 
+[2024-04-10 11:29:46] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:29:47] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:29:48] __main__ INFO: Epoch: [98][ 0/96]	Loss 0.0742 (0.0742)	Accuracy 100.000 (100.000)	mseValence 0.0040 (0.0040)	mseArousal 0.0047 (0.0047)
+[2024-04-10 11:29:57] __main__ INFO: Epoch: [98][40/96]	Loss 0.0951 (0.0908)	Accuracy 98.438 (99.276)	mseValence 0.0046 (0.0050)	mseArousal 0.0047 (0.0036)
+[2024-04-10 11:30:06] __main__ INFO: Epoch: [98][80/96]	Loss 0.0440 (0.0885)	Accuracy 100.000 (99.228)	mseValence 0.0034 (0.0050)	mseArousal 0.0021 (0.0035)
+[2024-04-10 11:30:10] __main__ INFO: Test: [ 0/24]	Loss 0.6323 (0.6323)	Accuracy 86.719 (86.719)
+[2024-04-10 11:30:13] __main__ INFO:  **** Accuracy 91.428 *** 
+[2024-04-10 11:30:13] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:30:13] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:30:14] __main__ INFO: Epoch: [99][ 0/96]	Loss 0.0555 (0.0555)	Accuracy 100.000 (100.000)	mseValence 0.0041 (0.0041)	mseArousal 0.0022 (0.0022)
+[2024-04-10 11:30:23] __main__ INFO: Epoch: [99][40/96]	Loss 0.0549 (0.0855)	Accuracy 100.000 (99.333)	mseValence 0.0040 (0.0050)	mseArousal 0.0030 (0.0034)
+[2024-04-10 11:30:32] __main__ INFO: Epoch: [99][80/96]	Loss 0.1245 (0.0827)	Accuracy 97.656 (99.354)	mseValence 0.0080 (0.0049)	mseArousal 0.0031 (0.0033)
+[2024-04-10 11:30:42] __main__ INFO: Epoch: [99][   0/2217]	Loss 2.1137 (2.1137)	mseValence 0.0587 (0.0587)	mseArousal 0.0544 (0.0544)
+[2024-04-10 11:32:06] __main__ INFO: Epoch: [99][ 200/2217]	Loss 0.8698 (1.0471)	mseValence 0.0374 (0.0389)	mseArousal 0.0355 (0.0348)
+[2024-04-10 11:32:54] __main__ INFO: Epoch: [99][ 400/2217]	Loss 1.2057 (1.0106)	mseValence 0.0485 (0.0382)	mseArousal 0.0505 (0.0337)
+[2024-04-10 11:33:40] __main__ INFO: Epoch: [99][ 600/2217]	Loss 0.8324 (0.9892)	mseValence 0.0301 (0.0376)	mseArousal 0.0253 (0.0331)
+[2024-04-10 11:34:26] __main__ INFO: Epoch: [99][ 800/2217]	Loss 0.8812 (0.9733)	mseValence 0.0275 (0.0373)	mseArousal 0.0374 (0.0326)
+[2024-04-10 11:35:12] __main__ INFO: Epoch: [99][1000/2217]	Loss 0.7034 (0.9643)	mseValence 0.0256 (0.0370)	mseArousal 0.0315 (0.0324)
+[2024-04-10 11:35:58] __main__ INFO: Epoch: [99][1200/2217]	Loss 1.3465 (0.9549)	mseValence 0.0649 (0.0367)	mseArousal 0.0364 (0.0323)
+[2024-04-10 11:36:44] __main__ INFO: Epoch: [99][1400/2217]	Loss 0.8476 (0.9484)	mseValence 0.0336 (0.0365)	mseArousal 0.0258 (0.0320)
+[2024-04-10 11:37:30] __main__ INFO: Epoch: [99][1600/2217]	Loss 0.7649 (0.9402)	mseValence 0.0305 (0.0363)	mseArousal 0.0277 (0.0318)
+[2024-04-10 11:38:20] __main__ INFO: Epoch: [99][1800/2217]	Loss 0.9056 (0.9308)	mseValence 0.0380 (0.0360)	mseArousal 0.0300 (0.0316)
+[2024-04-10 11:39:07] __main__ INFO: Epoch: [99][2000/2217]	Loss 1.1627 (0.9239)	mseValence 0.0561 (0.0359)	mseArousal 0.0320 (0.0314)
+[2024-04-10 11:39:53] __main__ INFO: Epoch: [99][2200/2217]	Loss 0.7485 (0.9176)	mseValence 0.0223 (0.0357)	mseArousal 0.0275 (0.0312)
+[2024-04-10 11:39:58] __main__ INFO: Test: [ 0/24]	Loss 0.7039 (0.7039)	Accuracy 82.812 (82.812)
+[2024-04-10 11:40:02] __main__ INFO:  **** Accuracy 86.604 *** 
+[2024-04-10 11:40:02] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:40:03] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:40:05] __main__ INFO: Epoch: [100][ 0/96]	Loss 0.6878 (0.6878)	Accuracy 91.406 (91.406)	mseValence 0.0260 (0.0260)	mseArousal 0.0266 (0.0266)
+[2024-04-10 11:40:16] __main__ INFO: Epoch: [100][40/96]	Loss 0.2253 (0.3260)	Accuracy 95.312 (95.960)	mseValence 0.0100 (0.0145)	mseArousal 0.0072 (0.0103)
+[2024-04-10 11:40:25] __main__ INFO: Epoch: [100][80/96]	Loss 0.2226 (0.2605)	Accuracy 97.656 (96.788)	mseValence 0.0113 (0.0119)	mseArousal 0.0075 (0.0085)
+[2024-04-10 11:40:29] __main__ INFO: Test: [ 0/24]	Loss 0.5616 (0.5616)	Accuracy 85.938 (85.938)
+[2024-04-10 11:40:32] __main__ INFO:  **** Accuracy 89.602 *** 
+[2024-04-10 11:40:32] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:40:32] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:40:33] __main__ INFO: Epoch: [101][ 0/96]	Loss 0.1055 (0.1055)	Accuracy 100.000 (100.000)	mseValence 0.0057 (0.0057)	mseArousal 0.0044 (0.0044)
+[2024-04-10 11:40:42] __main__ INFO: Epoch: [101][40/96]	Loss 0.1652 (0.1375)	Accuracy 96.875 (98.590)	mseValence 0.0068 (0.0074)	mseArousal 0.0047 (0.0051)
+[2024-04-10 11:40:51] __main__ INFO: Epoch: [101][80/96]	Loss 0.1084 (0.1340)	Accuracy 99.219 (98.650)	mseValence 0.0077 (0.0073)	mseArousal 0.0035 (0.0048)
+[2024-04-10 11:40:55] __main__ INFO: Test: [ 0/24]	Loss 0.5840 (0.5840)	Accuracy 86.719 (86.719)
+[2024-04-10 11:40:58] __main__ INFO:  **** Accuracy 89.831 *** 
+[2024-04-10 11:40:58] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:40:59] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:41:00] __main__ INFO: Epoch: [102][ 0/96]	Loss 0.1106 (0.1106)	Accuracy 98.438 (98.438)	mseValence 0.0066 (0.0066)	mseArousal 0.0045 (0.0045)
+[2024-04-10 11:41:08] __main__ INFO: Epoch: [102][40/96]	Loss 0.0985 (0.1220)	Accuracy 99.219 (98.952)	mseValence 0.0077 (0.0071)	mseArousal 0.0025 (0.0043)
+[2024-04-10 11:41:17] __main__ INFO: Epoch: [102][80/96]	Loss 0.1244 (0.1226)	Accuracy 98.438 (98.900)	mseValence 0.0069 (0.0069)	mseArousal 0.0052 (0.0045)
+[2024-04-10 11:41:22] __main__ INFO: Test: [ 0/24]	Loss 0.6042 (0.6042)	Accuracy 85.938 (85.938)
+[2024-04-10 11:41:24] __main__ INFO:  **** Accuracy 89.961 *** 
+[2024-04-10 11:41:24] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:41:25] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:41:26] __main__ INFO: Epoch: [103][ 0/96]	Loss 0.0774 (0.0774)	Accuracy 100.000 (100.000)	mseValence 0.0059 (0.0059)	mseArousal 0.0031 (0.0031)
+[2024-04-10 11:41:35] __main__ INFO: Epoch: [103][40/96]	Loss 0.0588 (0.1039)	Accuracy 100.000 (99.085)	mseValence 0.0039 (0.0058)	mseArousal 0.0028 (0.0039)
+[2024-04-10 11:41:44] __main__ INFO: Epoch: [103][80/96]	Loss 0.0797 (0.1037)	Accuracy 100.000 (99.103)	mseValence 0.0045 (0.0058)	mseArousal 0.0048 (0.0040)
+[2024-04-10 11:41:48] __main__ INFO: Test: [ 0/24]	Loss 0.5845 (0.5845)	Accuracy 86.719 (86.719)
+[2024-04-10 11:41:51] __main__ INFO:  **** Accuracy 90.645 *** 
+[2024-04-10 11:41:51] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:41:51] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:41:52] __main__ INFO: Epoch: [104][ 0/96]	Loss 0.0966 (0.0966)	Accuracy 99.219 (99.219)	mseValence 0.0069 (0.0069)	mseArousal 0.0037 (0.0037)
+[2024-04-10 11:42:01] __main__ INFO: Epoch: [104][40/96]	Loss 0.0730 (0.0981)	Accuracy 100.000 (99.009)	mseValence 0.0057 (0.0054)	mseArousal 0.0030 (0.0039)
+[2024-04-10 11:42:11] __main__ INFO: Epoch: [104][80/96]	Loss 0.1036 (0.0963)	Accuracy 98.438 (99.016)	mseValence 0.0049 (0.0054)	mseArousal 0.0037 (0.0038)
+[2024-04-10 11:42:15] __main__ INFO: Test: [ 0/24]	Loss 0.5379 (0.5379)	Accuracy 86.719 (86.719)
+[2024-04-10 11:42:18] __main__ INFO:  **** Accuracy 90.645 *** 
+[2024-04-10 11:42:18] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:42:18] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:42:20] __main__ INFO: Epoch: [105][ 0/96]	Loss 0.0823 (0.0823)	Accuracy 98.438 (98.438)	mseValence 0.0047 (0.0047)	mseArousal 0.0027 (0.0027)
+[2024-04-10 11:42:29] __main__ INFO: Epoch: [105][40/96]	Loss 0.0918 (0.0786)	Accuracy 100.000 (99.619)	mseValence 0.0064 (0.0049)	mseArousal 0.0041 (0.0034)
+[2024-04-10 11:42:38] __main__ INFO: Epoch: [105][80/96]	Loss 0.0591 (0.0849)	Accuracy 100.000 (99.441)	mseValence 0.0040 (0.0051)	mseArousal 0.0024 (0.0035)
+[2024-04-10 11:42:42] __main__ INFO: Test: [ 0/24]	Loss 0.5789 (0.5789)	Accuracy 85.938 (85.938)
+[2024-04-10 11:42:45] __main__ INFO:  **** Accuracy 90.482 *** 
+[2024-04-10 11:42:45] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:42:45] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:42:47] __main__ INFO: Epoch: [106][ 0/96]	Loss 0.0899 (0.0899)	Accuracy 98.438 (98.438)	mseValence 0.0048 (0.0048)	mseArousal 0.0042 (0.0042)
+[2024-04-10 11:42:56] __main__ INFO: Epoch: [106][40/96]	Loss 0.0670 (0.0863)	Accuracy 100.000 (99.238)	mseValence 0.0052 (0.0050)	mseArousal 0.0023 (0.0035)
+[2024-04-10 11:43:05] __main__ INFO: Epoch: [106][80/96]	Loss 0.0637 (0.0886)	Accuracy 99.219 (99.180)	mseValence 0.0041 (0.0050)	mseArousal 0.0031 (0.0036)
+[2024-04-10 11:43:09] __main__ INFO: Test: [ 0/24]	Loss 0.5782 (0.5782)	Accuracy 85.938 (85.938)
+[2024-04-10 11:43:11] __main__ INFO:  **** Accuracy 90.417 *** 
+[2024-04-10 11:43:11] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:43:12] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:43:13] __main__ INFO: Epoch: [107][ 0/96]	Loss 0.0905 (0.0905)	Accuracy 98.438 (98.438)	mseValence 0.0043 (0.0043)	mseArousal 0.0036 (0.0036)
+[2024-04-10 11:43:22] __main__ INFO: Epoch: [107][40/96]	Loss 0.0621 (0.0913)	Accuracy 100.000 (99.085)	mseValence 0.0031 (0.0048)	mseArousal 0.0034 (0.0037)
+[2024-04-10 11:43:31] __main__ INFO: Epoch: [107][80/96]	Loss 0.0692 (0.0846)	Accuracy 100.000 (99.238)	mseValence 0.0057 (0.0047)	mseArousal 0.0027 (0.0034)
+[2024-04-10 11:43:35] __main__ INFO: Test: [ 0/24]	Loss 0.6045 (0.6045)	Accuracy 86.719 (86.719)
+[2024-04-10 11:43:38] __main__ INFO:  **** Accuracy 90.548 *** 
+[2024-04-10 11:43:38] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:43:38] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:43:39] __main__ INFO: Epoch: [108][ 0/96]	Loss 0.0573 (0.0573)	Accuracy 100.000 (100.000)	mseValence 0.0036 (0.0036)	mseArousal 0.0025 (0.0025)
+[2024-04-10 11:43:48] __main__ INFO: Epoch: [108][40/96]	Loss 0.0581 (0.0768)	Accuracy 100.000 (99.466)	mseValence 0.0040 (0.0045)	mseArousal 0.0027 (0.0031)
+[2024-04-10 11:43:58] __main__ INFO: Epoch: [108][80/96]	Loss 0.0479 (0.0798)	Accuracy 100.000 (99.373)	mseValence 0.0038 (0.0045)	mseArousal 0.0022 (0.0032)
+[2024-04-10 11:44:02] __main__ INFO: Test: [ 0/24]	Loss 0.5995 (0.5995)	Accuracy 86.719 (86.719)
+[2024-04-10 11:44:04] __main__ INFO:  **** Accuracy 90.482 *** 
+[2024-04-10 11:44:04] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:44:05] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:44:06] __main__ INFO: Epoch: [109][ 0/96]	Loss 0.0642 (0.0642)	Accuracy 100.000 (100.000)	mseValence 0.0037 (0.0037)	mseArousal 0.0035 (0.0035)
+[2024-04-10 11:44:15] __main__ INFO: Epoch: [109][40/96]	Loss 0.0462 (0.0733)	Accuracy 100.000 (99.428)	mseValence 0.0033 (0.0042)	mseArousal 0.0023 (0.0030)
+[2024-04-10 11:44:24] __main__ INFO: Epoch: [109][80/96]	Loss 0.0621 (0.0732)	Accuracy 99.219 (99.441)	mseValence 0.0032 (0.0043)	mseArousal 0.0027 (0.0029)
+[2024-04-10 11:44:34] __main__ INFO: Epoch: [109][   0/2217]	Loss 1.8796 (1.8796)	mseValence 0.0566 (0.0566)	mseArousal 0.0596 (0.0596)
+[2024-04-10 11:46:09] __main__ INFO: Epoch: [109][ 200/2217]	Loss 0.8443 (0.9239)	mseValence 0.0337 (0.0362)	mseArousal 0.0275 (0.0312)
+[2024-04-10 11:46:56] __main__ INFO: Epoch: [109][ 400/2217]	Loss 0.8828 (0.9009)	mseValence 0.0332 (0.0355)	mseArousal 0.0355 (0.0306)
+[2024-04-10 11:47:42] __main__ INFO: Epoch: [109][ 600/2217]	Loss 0.9381 (0.8850)	mseValence 0.0340 (0.0349)	mseArousal 0.0263 (0.0301)
+[2024-04-10 11:48:28] __main__ INFO: Epoch: [109][ 800/2217]	Loss 0.8155 (0.8740)	mseValence 0.0356 (0.0346)	mseArousal 0.0238 (0.0300)
+[2024-04-10 11:49:14] __main__ INFO: Epoch: [109][1000/2217]	Loss 0.9854 (0.8663)	mseValence 0.0472 (0.0344)	mseArousal 0.0280 (0.0298)
+[2024-04-10 11:50:00] __main__ INFO: Epoch: [109][1200/2217]	Loss 0.6630 (0.8591)	mseValence 0.0266 (0.0342)	mseArousal 0.0242 (0.0296)
+[2024-04-10 11:50:45] __main__ INFO: Epoch: [109][1400/2217]	Loss 0.7923 (0.8505)	mseValence 0.0250 (0.0339)	mseArousal 0.0302 (0.0295)
+[2024-04-10 11:51:31] __main__ INFO: Epoch: [109][1600/2217]	Loss 0.7895 (0.8432)	mseValence 0.0340 (0.0338)	mseArousal 0.0248 (0.0293)
+[2024-04-10 11:52:17] __main__ INFO: Epoch: [109][1800/2217]	Loss 0.7382 (0.8380)	mseValence 0.0332 (0.0336)	mseArousal 0.0249 (0.0291)
+[2024-04-10 11:53:03] __main__ INFO: Epoch: [109][2000/2217]	Loss 0.9176 (0.8336)	mseValence 0.0445 (0.0335)	mseArousal 0.0224 (0.0290)
+[2024-04-10 11:53:49] __main__ INFO: Epoch: [109][2200/2217]	Loss 0.8000 (0.8284)	mseValence 0.0329 (0.0333)	mseArousal 0.0223 (0.0288)
+[2024-04-10 11:53:55] __main__ INFO: Test: [ 0/24]	Loss 0.7369 (0.7369)	Accuracy 82.812 (82.812)
+[2024-04-10 11:53:58] __main__ INFO:  **** Accuracy 85.919 *** 
+[2024-04-10 11:53:58] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:53:59] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:54:01] __main__ INFO: Epoch: [110][ 0/96]	Loss 0.5729 (0.5729)	Accuracy 92.188 (92.188)	mseValence 0.0241 (0.0241)	mseArousal 0.0203 (0.0203)
+[2024-04-10 11:54:11] __main__ INFO: Epoch: [110][40/96]	Loss 0.1934 (0.2998)	Accuracy 97.656 (96.551)	mseValence 0.0095 (0.0135)	mseArousal 0.0069 (0.0102)
+[2024-04-10 11:54:20] __main__ INFO: Epoch: [110][80/96]	Loss 0.1401 (0.2342)	Accuracy 99.219 (97.367)	mseValence 0.0097 (0.0110)	mseArousal 0.0040 (0.0081)
+[2024-04-10 11:54:24] __main__ INFO: Test: [ 0/24]	Loss 0.6882 (0.6882)	Accuracy 85.156 (85.156)
+[2024-04-10 11:54:27] __main__ INFO:  **** Accuracy 89.537 *** 
+[2024-04-10 11:54:27] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:54:27] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:54:28] __main__ INFO: Epoch: [111][ 0/96]	Loss 0.1072 (0.1072)	Accuracy 100.000 (100.000)	mseValence 0.0063 (0.0063)	mseArousal 0.0059 (0.0059)
+[2024-04-10 11:54:37] __main__ INFO: Epoch: [111][40/96]	Loss 0.1052 (0.1354)	Accuracy 100.000 (98.761)	mseValence 0.0067 (0.0071)	mseArousal 0.0046 (0.0052)
+[2024-04-10 11:54:46] __main__ INFO: Epoch: [111][80/96]	Loss 0.1340 (0.1241)	Accuracy 98.438 (98.872)	mseValence 0.0086 (0.0066)	mseArousal 0.0031 (0.0048)
+[2024-04-10 11:54:50] __main__ INFO: Test: [ 0/24]	Loss 0.6983 (0.6983)	Accuracy 83.594 (83.594)
+[2024-04-10 11:54:53] __main__ INFO:  **** Accuracy 89.407 *** 
+[2024-04-10 11:54:53] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:54:53] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:54:54] __main__ INFO: Epoch: [112][ 0/96]	Loss 0.0701 (0.0701)	Accuracy 100.000 (100.000)	mseValence 0.0047 (0.0047)	mseArousal 0.0028 (0.0028)
+[2024-04-10 11:55:03] __main__ INFO: Epoch: [112][40/96]	Loss 0.0921 (0.1056)	Accuracy 100.000 (99.219)	mseValence 0.0057 (0.0061)	mseArousal 0.0039 (0.0042)
+[2024-04-10 11:55:12] __main__ INFO: Epoch: [112][80/96]	Loss 0.1188 (0.1081)	Accuracy 98.438 (99.074)	mseValence 0.0068 (0.0059)	mseArousal 0.0041 (0.0043)
+[2024-04-10 11:55:16] __main__ INFO: Test: [ 0/24]	Loss 0.7166 (0.7166)	Accuracy 84.375 (84.375)
+[2024-04-10 11:55:19] __main__ INFO:  **** Accuracy 89.798 *** 
+[2024-04-10 11:55:19] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:55:20] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:55:21] __main__ INFO: Epoch: [113][ 0/96]	Loss 0.0812 (0.0812)	Accuracy 100.000 (100.000)	mseValence 0.0049 (0.0049)	mseArousal 0.0035 (0.0035)
+[2024-04-10 11:55:30] __main__ INFO: Epoch: [113][40/96]	Loss 0.0800 (0.0945)	Accuracy 99.219 (99.123)	mseValence 0.0044 (0.0055)	mseArousal 0.0035 (0.0037)
+[2024-04-10 11:55:39] __main__ INFO: Epoch: [113][80/96]	Loss 0.1078 (0.0935)	Accuracy 98.438 (99.171)	mseValence 0.0057 (0.0054)	mseArousal 0.0036 (0.0037)
+[2024-04-10 11:55:43] __main__ INFO: Test: [ 0/24]	Loss 0.7588 (0.7588)	Accuracy 85.156 (85.156)
+[2024-04-10 11:55:46] __main__ INFO:  **** Accuracy 89.700 *** 
+[2024-04-10 11:55:46] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:55:46] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:55:48] __main__ INFO: Epoch: [114][ 0/96]	Loss 0.1017 (0.1017)	Accuracy 98.438 (98.438)	mseValence 0.0067 (0.0067)	mseArousal 0.0030 (0.0030)
+[2024-04-10 11:55:57] __main__ INFO: Epoch: [114][40/96]	Loss 0.0896 (0.0890)	Accuracy 99.219 (99.143)	mseValence 0.0041 (0.0052)	mseArousal 0.0039 (0.0035)
+[2024-04-10 11:56:06] __main__ INFO: Epoch: [114][80/96]	Loss 0.0652 (0.0892)	Accuracy 100.000 (99.267)	mseValence 0.0036 (0.0051)	mseArousal 0.0028 (0.0035)
+[2024-04-10 11:56:10] __main__ INFO: Test: [ 0/24]	Loss 0.8528 (0.8528)	Accuracy 82.031 (82.031)
+[2024-04-10 11:56:12] __main__ INFO:  **** Accuracy 89.472 *** 
+[2024-04-10 11:56:12] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:56:13] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:56:14] __main__ INFO: Epoch: [115][ 0/96]	Loss 0.0588 (0.0588)	Accuracy 100.000 (100.000)	mseValence 0.0029 (0.0029)	mseArousal 0.0034 (0.0034)
+[2024-04-10 11:56:23] __main__ INFO: Epoch: [115][40/96]	Loss 0.0530 (0.0892)	Accuracy 100.000 (99.333)	mseValence 0.0040 (0.0052)	mseArousal 0.0024 (0.0036)
+[2024-04-10 11:56:32] __main__ INFO: Epoch: [115][80/96]	Loss 0.1019 (0.0836)	Accuracy 99.219 (99.421)	mseValence 0.0060 (0.0050)	mseArousal 0.0038 (0.0035)
+[2024-04-10 11:56:36] __main__ INFO: Test: [ 0/24]	Loss 0.7995 (0.7995)	Accuracy 83.594 (83.594)
+[2024-04-10 11:56:39] __main__ INFO:  **** Accuracy 90.352 *** 
+[2024-04-10 11:56:39] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:56:39] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:56:41] __main__ INFO: Epoch: [116][ 0/96]	Loss 0.0607 (0.0607)	Accuracy 100.000 (100.000)	mseValence 0.0041 (0.0041)	mseArousal 0.0025 (0.0025)
+[2024-04-10 11:56:50] __main__ INFO: Epoch: [116][40/96]	Loss 0.0620 (0.0804)	Accuracy 100.000 (99.409)	mseValence 0.0043 (0.0050)	mseArousal 0.0031 (0.0031)
+[2024-04-10 11:56:59] __main__ INFO: Epoch: [116][80/96]	Loss 0.0495 (0.0786)	Accuracy 100.000 (99.431)	mseValence 0.0032 (0.0048)	mseArousal 0.0027 (0.0031)
+[2024-04-10 11:57:03] __main__ INFO: Test: [ 0/24]	Loss 0.8154 (0.8154)	Accuracy 85.156 (85.156)
+[2024-04-10 11:57:05] __main__ INFO:  **** Accuracy 90.222 *** 
+[2024-04-10 11:57:05] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:57:06] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:57:07] __main__ INFO: Epoch: [117][ 0/96]	Loss 0.0536 (0.0536)	Accuracy 99.219 (99.219)	mseValence 0.0035 (0.0035)	mseArousal 0.0027 (0.0027)
+[2024-04-10 11:57:16] __main__ INFO: Epoch: [117][40/96]	Loss 0.1467 (0.0797)	Accuracy 97.656 (99.371)	mseValence 0.0042 (0.0047)	mseArousal 0.0024 (0.0031)
+[2024-04-10 11:57:25] __main__ INFO: Epoch: [117][80/96]	Loss 0.0848 (0.0798)	Accuracy 98.438 (99.373)	mseValence 0.0056 (0.0046)	mseArousal 0.0027 (0.0032)
+[2024-04-10 11:57:29] __main__ INFO: Test: [ 0/24]	Loss 0.7907 (0.7907)	Accuracy 84.375 (84.375)
+[2024-04-10 11:57:32] __main__ INFO:  **** Accuracy 90.254 *** 
+[2024-04-10 11:57:32] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:57:33] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:57:34] __main__ INFO: Epoch: [118][ 0/96]	Loss 0.0491 (0.0491)	Accuracy 100.000 (100.000)	mseValence 0.0029 (0.0029)	mseArousal 0.0027 (0.0027)
+[2024-04-10 11:57:43] __main__ INFO: Epoch: [118][40/96]	Loss 0.0482 (0.0702)	Accuracy 100.000 (99.486)	mseValence 0.0022 (0.0042)	mseArousal 0.0027 (0.0029)
+[2024-04-10 11:57:52] __main__ INFO: Epoch: [118][80/96]	Loss 0.1409 (0.0736)	Accuracy 99.219 (99.412)	mseValence 0.0056 (0.0044)	mseArousal 0.0032 (0.0029)
+[2024-04-10 11:57:56] __main__ INFO: Test: [ 0/24]	Loss 0.7818 (0.7818)	Accuracy 85.156 (85.156)
+[2024-04-10 11:57:58] __main__ INFO:  **** Accuracy 90.059 *** 
+[2024-04-10 11:57:58] __main__ INFO: Current best accuracy: 92.89439392089844
+[2024-04-10 11:57:59] __main__ INFO: Current learning rate: 0.00025
+[2024-04-10 11:58:00] __main__ INFO: Epoch: [119][ 0/96]	Loss 0.0607 (0.0607)	Accuracy 99.219 (99.219)	mseValence 0.0035 (0.0035)	mseArousal 0.0024 (0.0024)
+[2024-04-10 11:58:09] __main__ INFO: Epoch: [119][40/96]	Loss 0.0519 (0.0747)	Accuracy 100.000 (99.200)	mseValence 0.0039 (0.0041)	mseArousal 0.0026 (0.0030)
+[2024-04-10 11:58:18] __main__ INFO: Epoch: [119][80/96]	Loss 0.0534 (0.0756)	Accuracy 99.219 (99.219)	mseValence 0.0025 (0.0042)	mseArousal 0.0028 (0.0029)
+[2024-04-10 11:58:27] __main__ INFO: Epoch: [119][   0/2217]	Loss 1.7780 (1.7780)	mseValence 0.0425 (0.0425)	mseArousal 0.0592 (0.0592)
+[2024-04-10 11:59:43] __main__ INFO: Epoch: [119][ 200/2217]	Loss 0.9207 (0.8500)	mseValence 0.0462 (0.0334)	mseArousal 0.0252 (0.0299)
+[2024-04-10 12:00:32] __main__ INFO: Epoch: [119][ 400/2217]	Loss 0.7819 (0.8238)	mseValence 0.0314 (0.0328)	mseArousal 0.0248 (0.0291)
+[2024-04-10 12:01:18] __main__ INFO: Epoch: [119][ 600/2217]	Loss 0.6780 (0.8170)	mseValence 0.0332 (0.0327)	mseArousal 0.0265 (0.0289)
+[2024-04-10 12:02:04] __main__ INFO: Epoch: [119][ 800/2217]	Loss 0.6791 (0.8122)	mseValence 0.0261 (0.0326)	mseArousal 0.0211 (0.0286)
+[2024-04-10 12:02:50] __main__ INFO: Epoch: [119][1000/2217]	Loss 0.7594 (0.8040)	mseValence 0.0272 (0.0323)	mseArousal 0.0229 (0.0282)
+[2024-04-10 12:03:36] __main__ INFO: Epoch: [119][1200/2217]	Loss 0.9490 (0.7963)	mseValence 0.0496 (0.0323)	mseArousal 0.0262 (0.0280)
+[2024-04-10 12:04:24] __main__ INFO: Epoch: [119][1400/2217]	Loss 0.9205 (0.7870)	mseValence 0.0311 (0.0319)	mseArousal 0.0377 (0.0277)
+[2024-04-10 12:05:10] __main__ INFO: Epoch: [119][1600/2217]	Loss 0.6865 (0.7799)	mseValence 0.0318 (0.0317)	mseArousal 0.0261 (0.0275)
+[2024-04-10 12:05:56] __main__ INFO: Epoch: [119][1800/2217]	Loss 0.6861 (0.7759)	mseValence 0.0297 (0.0316)	mseArousal 0.0234 (0.0274)
+[2024-04-10 12:06:42] __main__ INFO: Epoch: [119][2000/2217]	Loss 0.8041 (0.7716)	mseValence 0.0361 (0.0315)	mseArousal 0.0340 (0.0272)
+[2024-04-10 12:07:27] __main__ INFO: Epoch: [119][2200/2217]	Loss 0.6868 (0.7674)	mseValence 0.0331 (0.0314)	mseArousal 0.0239 (0.0271)
+[2024-04-10 12:07:34] __main__ INFO: Test: [ 0/24]	Loss 0.8765 (0.8765)	Accuracy 82.812 (82.812)
+[2024-04-10 12:07:37] __main__ INFO:  **** Accuracy 85.039 *** 
+[2024-04-10 12:07:37] __main__ INFO: Current best accuracy: 92.89439392089844
