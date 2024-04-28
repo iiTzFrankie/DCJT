@@ -9,7 +9,7 @@ Joint Training on Multiple Datasets With Inconsistent Labeling Criteria for Faci
 
 * Step 3: Edit 'configs/rafdb.yaml'
 
-* Step 3: Run 'python train.py --config configs/rafdb.yaml'
+* Step 4: Run 'python train.py --config configs/rafdb.yaml'
 
 # Citation
 
