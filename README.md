@@ -7,7 +7,9 @@ Joint Training on Multiple Datasets With Inconsistent Labeling Criteria for Faci
 
 * Step 2: Open './listpath', change path in these txt files. e.g. '/NASdata/frank/emoDataset/RAFDB/Image/aligned/test_0001_aligned.jpg 4' to '/yourpath/yourpath/.../RAFDB/Image/aligned/test_0001_aligned.jpg 4'
 
-* Step 3: run 'python train.py --config configs/rafdb.yaml'
+* Step 3: Edit 'configs/rafdb.yaml'
+
+* Step 3: Run 'python train.py --config configs/rafdb.yaml'
 
 # Citation
 
