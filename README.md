@@ -24,6 +24,4 @@ Joint Training on Multiple Datasets With Inconsistent Labeling Criteria for Faci
 ```
 
 
-# Note
 
-We refined our codes after the paper was accepted. The best performance using ARM as the backbone on RAF-DB dataset can achieve 93.5%.
